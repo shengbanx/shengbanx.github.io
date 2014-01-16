@@ -40,7 +40,7 @@
 
 
 
-    <li><a href="/design">Design</a></li>
+    <li><a href="//manifold.shengbanx.com">Manifold</a></li>
 
 
 
@@ -544,56 +544,7 @@ UI，再做网站设计；做完这个GIMS软件；学好flash设计模式及后
 <p>*<a href="http://help.adobe.com/zh_CN/ActionScript/3.0_ProgrammingAS3/WS509D19BB-239B-4489-B965-844DDA611AE7.html" target="_blank">UV 映射</a>是一种纹理化对象的方法。它依赖于两个值：U 水平 (x) 值和 V 垂直 (y) 值。这两个值不是基于像素值，而是基于百分比。0 U 和 0 V 表示图像的坐上角，1 U 和 1 V 表示右下角
 &nbsp;</p>
 </blockquote>
-<p>那么，现在开始创建舞台元素玩玩了，如上一篇所讲，首先是创建启动类，然后在Game类中创建一个显示对象，建什么好呢？不妨查查API，starling.display，有Button、Image、MovieClip、Quad（四边形）以及其他一些容器。这里，我们创建一个button玩玩。</p>
-<blockquote>
-<p>Button:</p>
-<p>一个简单的按钮由一张图片和一个可选的文本组成。</p>
-<p>你可以分别为按钮构造函数传递up和down两种状态的纹理。 如果你没有指定一个down状态的纹理，按钮会采用默认的办法：被触碰的时候缩小一点。 此外，你可以在按钮上覆盖一个文本，要自定义这个文本，只需要提供和原来的基本相同的文本框即可。 你可以使用<code>textBounds</code>属性，将文本移动到一个指定的位置。</p>
-<p>判断按钮是否被触碰，请使用<code>triggered</code>事件类型， 用这个事件来代替普通的触碰事件。也就是说，用户只要在松开手指或者鼠标之前，移动手指/鼠标离开按钮区域，就可以取消对该按钮的点击操作。
-&nbsp;</p>
-<p><pre class="brush:as3">package
-{
-    import starling.display.Button;
-    import starling.display.Sprite;
-    import starling.textures.Texture;</p>
-</blockquote>
-<pre><code>/**
- * ...
- * @author SHENGbanX
- */
-public class Game7 extends Sprite
-{
-    [Embed(source = &quot;../assets/chicken.png&quot;)]
-    private static const Chicken:Class;
-    public function Game7()
-    {
-                    //通过Texture类中的静态方法fromBitmap来创建Texture纹理对象
-        var buttonTexture:Texture = Texture.fromBitmap(new Chicken());
-        var button:Button = new Button(buttonTexture, &quot;Hello Starling&quot;);
-        button.x = 200;
-        button.y = 200;
-                    addChild(button);
-    }
-
-}
-</code></pre><p>}</pre>
-自己用ps简单地画了一个小鸡作为按钮的图片纹理，加上文字。但这样文字刚好在图片上，所以要用<code>textBounds</code>属性，把文字移到一个地方。</p>
-<p>查api可知textBounds:Rectangle，Rectangle是flash.geom包（包中包含几何图形类（如点、矩形和转换矩阵）以支持 BitmapData 类和位图缓存功能。）里的一个类。</p>
-<p>而Rectangle 对象是按其位置（由它左上角的点 (x, y) 确定）以及宽度和高度定义的区域。</p>
-<p>加上button.textBounds = (0,50,100,100);</p>
-<p>但报错了，类型不对，Rectangle不是就4个数作属性吗？思来想去，还是去看看starling的源代码：</p>
-<p><pre class="brush:as3">        /<em>* The bounds of the textfield on the button. Allows moving the text to a custom position. </em>/
-        public function get textBounds():Rectangle { return mTextBounds.clone(); }
-        public function set textBounds(value:Rectangle):void
-        {
-            mTextBounds = value.clone();
-            createTextField();
-        }</pre>
-仔细研究了一下，发现还是应该是那样没错的，试了很多种方法，通过trace(button.textBounds)结果是(x=0, y=0, w=73, h=53),以这个做值或(x=0, y=0, width=73, height=53)也不行。</p>
-<p>最后这样才可以：</p>
-<p><pre class="brush:as3">button.textBounds = new Rectangle(0, 50, 73,53);</pre>
-&nbsp;</p>
-<p><strong>没有教程的时候，查API、源码等方法自己研究还是很不错的！学习Starling更需如此。</strong></p>
+<p>那么，现在开始创建舞台元素玩玩了，如上一篇所讲，首先是创建启动类，然后在Game类中创建一个显示对象，建什么好呢？不妨查查API，starling.display，有Button、Image、MovieClip、Quad（四边形）以及其他一些容器。这里，我们创建一个button玩玩。
 
         
       </div>
@@ -666,43 +617,7 @@ public class Startup extends Sprite
 
 }
 </code></pre><p>}</pre>
-上面用核心starling类创建了starling对象_starling，然后用start方法启动它，这样，他就会按照设置好的信息[SWF...]渲染Game类了，Display显示列表和as原本的名字基本相似，所以容易混淆（常常自动填写代码错误...），但starling使用了stage3D，运行速度快。starling类还有其他用处，例如我常常就会习惯的加上_starling.showStats = true;来显示一些FPS和内存占用信息。</p>
-<p>查API文档可以知道，starling类还可以：</p>
-<blockquote>
-<p><strong>访问Starling对象</strong></p>
-<p>在你的程序里，你可以在任意时间通过静态方法<code>Starling.current</code>访问当前的Starling对象。它会返回 当前活跃的Starling实例（实际上大多数程序只会有一个Starling对象）。</p>
-<p><strong>观察口，视口</strong></p>
-<p>即是Starling内容渲染显示的范围，默认情况下是舞台大小。但是，你可以使用“viewport”属性去改变它。当你只想在屏幕的一部分中 渲染，或者播放器大小改变时，这个属性非常有用。随后你可以监听由Starling舞台发出的RESIZE事件。</p>
-<p><strong>原生Flash叠加层</strong></p>
-<p>有时你会想在Starling上面显示一些原生Flash内容，这就是<code>nativeOverlay</code>属性的作用。它返回的是在Starling之上 的原生FLash Sprite。你可以在叠加层内添加原生Flash对象。</p>
-<p>但是需要注意，在3D加速内容之上的原生Flash内容在某些（移动）平台上会有性能上的问题。因为这个原因，请注意删除这一层中所有 不需要和不再使用的对象。当这一层被置空后Starling会从显示列表中删除原生Flash叠加层。</p>
-<p><strong>多点触摸</strong></p>
-<p>对于提供支持多点触摸功能的设备，Starling也支持这项功能。在开发过程中，我们大多数基本上都是使用鼠标的键盘，Starling可以 在“Shift”和“Ctrl”的帮助下（Mac苹果机是“Cmd”）模拟实现多点触摸事件。启动<code>simulateMultitouch</code>属性就可以激活 这个功能。</p>
-<p><strong>处理丢失的渲染内容</strong></p>
-<p>在某些系统和某些条件下（例如，从系统睡眠中返回），Starling的stage3D渲染内容会丢失。如果类属性“handleLostContext” 设置为 “true” Starling会自动修复丢失内容。但是需要注意，这是以提高内存消耗为代价的。Starling会在内存中创建纹理缓存，这样 在内容丢失时才可以修复它。</p>
-<p>如果你想和丢失的内容交互，Starling在这个内容修复时发送&quot;Event.CONTEXT3D_CREATE&quot;事件，你可以在相对应的事件<strong><strong>*</strong></strong>中重新 创建这些不可用资源.</p>
-<p><strong>共享三维加速内容</strong></p>
-<p>正常情况下，Starling是独立处理stage3d加速内容。如果你想让Starling和其它的stage3d引擎同时使用，可能会达不到你需要的效果。 在这种情况下，你可以使用<code>shareContext</code>属性:</p>
-<ol>
-<li>手动创建和定义一个让两个框架公用的context3D对象 (通过<code>stage3D.requestContext3D</code> 和 <code>context.configureBackBuffer</code>)创建.</li>
-<li>使用已经定义了的context3d对象的stage3d实例来初始化Starling。 这样做会自动启用 <code>shareContext</code>.</li>
-<li>调用Starling实例的 <code>start()</code>(与往常一样). 这样做是让 Starling 对事件监听进行排队处理 (keyboard/mouse/touch).</li>
-<li>创建一个游戏逻辑（例如，使用原生的<code>ENTER_FRAME</code>事件）然后让它调用Starling的 <code>nextFrame</code>同时调用其它Stage3D引擎的同功能方法 . 相关类型的方法还有<code>context.clear()</code> 和 <code>context.present()</code>.
-&nbsp;</li>
-</ol>
-</blockquote>
-<p>接着新建一个Game类，</p>
-<p><pre class="brush:as3">import starling.display.Sprite;
-import starling.text.TextField;</p>
-<p>public class Game extends Sprite
-{
-    public function Game()
-    {
-        var textField:TextField = new TextField(400, 300, &quot;Hello Starling!&quot;);
-        addChild(textField);
-    }
-}</pre>
-一贯的hello world啦~然后把启动类Startup设为文档类，就可以测试了，一般都能测试成功了，当然，要注意调用的是flash的还是starling的方法。</p>
+上面用核心starling类创建了starling对象_starling，然后用start方法启动它，这样，他就会按照设置好的信息[SWF...]渲染Game类了，Display显示列表和as原本的名字基本相似，所以容易混淆（常常自动填写代码错误...），但starling使用了stage3D，运行速度快。starling类还有其他用处，例如我常常就会习惯的加上_starling.showStats = true;来显示一些FPS和内存占用信息。
 
         
       </div>
@@ -747,6 +662,18 @@ import starling.text.TextField;</p>
 <!-- Le javascript -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44448118-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 
 
 

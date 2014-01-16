@@ -40,7 +40,7 @@
 
 
 
-    <li><a href="/design">Design</a></li>
+    <li><a href="//manifold.shengbanx.com">Manifold</a></li>
 
 
 
@@ -136,8 +136,9 @@ public class Startup extends Sprite
 
 }
 </code></pre><p>}</pre>
-上面用核心starling类创建了starling对象_starling，然后用start方法启动它，这样，他就会按照设置好的信息[SWF...]渲染Game类了，Display显示列表和as原本的名字基本相似，所以容易混淆（常常自动填写代码错误...），但starling使用了stage3D，运行速度快。starling类还有其他用处，例如我常常就会习惯的加上_starling.showStats = true;来显示一些FPS和内存占用信息。</p>
-<p>查API文档可以知道，starling类还可以：</p>
+上面用核心starling类创建了starling对象_starling，然后用start方法启动它，这样，他就会按照设置好的信息[SWF...]渲染Game类了，Display显示列表和as原本的名字基本相似，所以容易混淆（常常自动填写代码错误...），但starling使用了stage3D，运行速度快。starling类还有其他用处，例如我常常就会习惯的加上_starling.showStats = true;来显示一些FPS和内存占用信息。
+<a id="more"></a>
+查API文档可以知道，starling类还可以：</p>
 <blockquote>
 <p><strong>访问Starling对象</strong></p>
 <p>在你的程序里，你可以在任意时间通过静态方法<code>Starling.current</code>访问当前的Starling对象。它会返回 当前活跃的Starling实例（实际上大多数程序只会有一个Starling对象）。</p>
@@ -208,6 +209,18 @@ import starling.text.TextField;</p>
 <!-- Le javascript -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44448118-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 
 
 
