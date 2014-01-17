@@ -137,7 +137,22 @@ UI设计之初就以高性能为主要目标，以位图为基础，利用延迟
 <li>Morn比flex轻量高效，比flash</li>
 </ol>
 <p>新版本已经全面支持移动设备开发了，其作者<a href="http://weibo.com/newyung" target="_blank">yungzhu</a>是个热心人（在q群上~），在官博上有<a href="http://blog.mornui.com/?p=563" target="_blank">demo</a>和<a href="http://blog.mornui.com/?p=514" target="_blank">使用教程</a>，还有<a href="http://www.mornui.com/doc/2.4/" target="_blank">在线API文档</a>大概一个下午就能摸熟，上手不难，但一经上手，你就会深深地爱上了它！（这是所有第一次使用的人的共识，但因为Morn
-UI还在不断完善，所以随着深入开发你就会发现其坑之多，且陷入其中，“其乐融融”！）
+UI还在不断完善，所以随着深入开发你就会发现其坑之多，且陷入其中，“其乐融融”！）</p>
+<h2 id="-"><strong>使用感受</strong></h2>
+<p>首先还是得感谢Morn UI带给我的“愉悦”开发过程（真心的），在近一个月的时间的GIMS开发过程中，按照规划开发一个个功能界面，都能在Morn UI库对应找到相关的组件、相关的函数可供调用。但总有一些时候会发现并没有这个实现方法，所以这个时候你就要到官方Morn交流群（官网有）里大吼一声，刚刚还在相互吹水的各位“大神”就会停下来给你解答，解答有时还会很热心的让你截图一步步找出解决办法，等没问题了，继续吹水~很喜欢这个氛围，虽然大家看起来都老不正经，但确是个热心的交流群（欢迎更多的人加入这个大家庭~）。</p>
+<p>Morn本身UI组件库就封装好了常用的UI组件和其需要用到的功能函数，加上其可视化编辑器，对于UI布局和功能开发真的很方便，下面简单地说几点：</p>
+<ol>
+<li><strong>UI组件切图。</strong>根据各个组件的不同，你需要相应的按照规定格式切出来，并按规定命名，规定格式及命名方式可以下载官方demo上面的UI资源查看或查看官方教程。一般是UI的3个状态（main、hover、pressed）按三等分上下排布，切成png。如button、checkBox、tab。（如下图）
+<img src="https://trello-attachments.s3.amazonaws.com/526899a67f73081b27001be1/52689a13874be19a6e0038b9/c596d9b45a6c3ee21feda68b056af10c/UI%E7%BB%84%E4%BB%B6%E5%88%87%E5%9B%BE.jpg" alt="UI组件切图"></li>
+<li><strong>“写”界面。</strong>直接使用Morn
+Builder，将切好的UI组件“导入”，通过这个可视化编辑器，根据需要调整相应参数，导出即可生成写好的UI代码。（参照Morn
+UI教程）</li>
+<li><strong>写功能逻辑代码。</strong>这个我是开始贪快直接将所有功能写在页面的as里（说好的MVC呢），后来到后面发现越来越累赘，想重构成MVC模式的发现很难了T^T。结果导致代码最后达到1000多行…我的错，所以最好在最开始就将该有的相关组件UI、界面分开来（不会的还是参照官方demo源文件）。</li>
+<li><strong>组件功能的不足。</strong>例如，写表单时，表单输入框的文本提示功能是没有的，需要自己写获取焦点失去焦点的提示文本代码。还有在写list时发现，选中操作不好写，List类没提供相关的监听函数，需要自己写。后来发现新版本改进了，但因为已经进行到一半，试了下更新UI库，结果就出问题了，还好git还原回来了。还有其他一些坑，迟些再补充。</li>
+</ol>
+<p>大概这么多，回到期末备考大军中去了，想深入了解Morn
+UI还是直接看其源代码最快。</p>
+<p>另外还有一篇别人写的不错的<a href="http://bbs.9ria.com/forum.php?mod=viewthread&amp;tid=194517&amp;highlight=morn" target="_blank">使用心得</a>，对编辑器原理和界面管理的一些分析,可以看看。</p>
 
         
       </div>
@@ -195,7 +210,49 @@ UI还在不断完善，所以随着深入开发你就会发现其坑之多，且
 pro，想着这样开发会不会快捷一点，界面是很容易出来了，但是里面的控件得自己写，爽了一下这个不可操作的软件后，便否定了这个方案。</p>
 <p>后来尝试了下flex开发，用flash
 builder，但很久没用的原因，在写界面的时候，卡在了一个地方，很难写，也否定了这个方案。</p>
-<p>接着想有什么UI库可以用，便想起了之前没怎么关注的<a href="http://www.mornui.com/" target="_blank">MornUI</a>，花了一个下午的时间研究了下MornUI的开发过程，试了一下做界面，发现很简单！超级方便！立刻爱上了MornUI了，但很快便遇到问题了，加了MornUI的官方交流群问，大家都很热情解答~问题很快就解决了。关于MornUI开发过程将在下一篇文章中介绍到。
+<p>接着想有什么UI库可以用，便想起了之前没怎么关注的<a href="http://www.mornui.com/" target="_blank">MornUI</a>，花了一个下午的时间研究了下MornUI的开发过程，试了一下做界面，发现很简单！超级方便！立刻爱上了MornUI了，但很快便遇到问题了，加了MornUI的官方交流群问，大家都很热情解答~问题很快就解决了。关于MornUI开发过程将在下一篇文章中介绍到。</p>
+<h2 id="-"><strong>第一周</strong></h2>
+<p>这周开始几天基本上是查阅了AIR开发文档，切图（为适应MornUI开发的特别切图），也没再麻烦设计师了，我自己搞掂了（会ps就是那么简单自信），使用MornUI自带可视化界面编辑工具Morn
+Builder做界面，项目代码逻辑是在FlashDevelop上写。很快，把一个像样的界面做出来了。（幸福来得那么突然~）</p>
+<p>这周刚好赶上电工实训，闲的时间比较多（把实验要求的任务做完后除了给老师检查基本上是自由时间了），每天都是从宿舍——饭堂——实验楼——综合楼之间往返（走路…），乐在其中，一心只想着这个项目，开发热情空前的高！</p>
+<p>在写完大体的界面后，因为是自定义窗口，相对于使用系统的自带窗口麻烦很多，自适应大小变化、拉伸、窗口按钮（最小化、最大化、关闭）操作都得自己写。</p>
+<p>参考了<a href="http://www.68design.net/Web-Guide/Flash/46381-1.html" target="_blank">Air窗口的外观修饰</a>和<a href="http://help.adobe.com/zh_CN/AIR/1.5/devappsflex/WS5b3ccc516d4fbf351e63e3d118666ade46-7e09.html" target="_blank">Air开发文档-窗口部分</a>，但还是存在问题，例如最大化、窗口适应大小比那话，不停尝试困扰了一段时间后，就此放弃…</p>
+<p>在基本写完界面，熟悉了MornUI的开发后，在周四就将其pull上github作项目管理与版本控制。这时界面左侧的工具栏按钮有点问题（后来才知道因为图案没设置好是否接受鼠标，遮挡住按钮的获取鼠标），以及中间的列表没写，只有一个大致的界面窗口。</p>
+<p>之后按照项目规划（自己定的），周五先完成drawer控件(切图、在Morn
+Builder上制作UI），其中MornUI的不熟悉还是遇到了一点问题。</p>
+<p>周六先建立数据库，准备储存新建的信息以及作为list列表的数据。以及数据库操作方法的建立。这里参考了<a href="http://www.ityangba.com/thread-483-1-1.html">Adobe
+AIR中的 SQLite
+数据库简介</a>和<a href="http://www.ityangba.com/thread-483-1-1.html" target="_blank">AIR连接本地数据库的CRUD实例</a>。</p>
+<p>好了，为了写新建信息功能，周日在写drawer新建的表单时遇到坑了，这个表单没有提示信息的方法，得自己写获取焦点、失去焦点的方法。</p>
+<h2 id="-"><strong>第二周</strong></h2>
+<p>周一将一个完整的表单（含提示信息功能）写好了之后，周二将数据库再修整完善了一下，周三实现新建信息存入数据库功能，周四写好了list列表，并能接收到数据库的数据。</p>
+<p>之后就是各种完善数据库操作及列表、drawer功能（不熟悉数据库的后果T\^T）。</p>
+<p>初次尝试了匹配文件功能进行文件操作，AIr很容易实现。参考：<a href="http://help.adobe.com/zh_CN/AIR/1.5/devappsflex/WS5b3ccc516d4fbf351e63e3d118666ade46-7dbb.html" target="_blank">air开发文档</a></p>
+<p>中间少不了一两次写到兴奋处舍不得回宿舍，直接在工作室通宵，天寒地冻的，一件短袖~</p>
+<h2 id="-"><strong>第三周</strong></h2>
+<p>第三周因为电工实训结束了，回到了课业苦海中，开发放松了很多，闲暇的将功能写完善，包括drawer的显示详细信息功能、编辑更改原有信息功能、匹配文件功能、搜索功能，大致上就差不多完成全部了。（想象中）</p>
+<h2 id="-"><strong>第四周</strong></h2>
+<p>一样由于接近完成，放松了很多，结果，第四周还剩余的两三个模块就是大坑，代码开始偷懒，项目没采用MVC，临时改也花了几天没重构好。</p>
+<p>将剩余的功能完善好，就在周末的女生节活动前各种拼命完善，寻找替代功能，在周五发布软件，icon还是用我做着玩的那个，然后晚上找bug，修bug到天亮（期间还弄了个介绍并提供在线安装的<a href="http://blog.vtmer.com/demo/gims" target="_blank">网页</a>…）</p>
+<h2 id="-"><strong>实际应用</strong></h2>
+<p>还好啦，在11月16日周六早上，看着真正投入使用就像自己孩子出生一样欣慰，但早上使用中反映各种bug（在我电脑上测试时明明没的！），上午再修改了下，中午带着疲惫的双眼到活动摊位玩了一下，看看实际使用中的情况，接着就回去安心地补眠了~</p>
+<p>晚上将剩余的导出表格功能写好，第二天也比较轻松，下午在女生节活动里玩了很久~晚上写数据库合并功能又失败了，后来是采用人工合并的替代方案…</p>
+<h2 id="-"><strong>后记</strong></h2>
+<p>我将这次视为封山之作…显然还不算，我的\
+flash开发还没学到位，编程模式还是渣，基础也不行了。但没办法，紧接着下学期找实习了，flash这块现阶段是基本上找不到好实习的。在做这个air应用的过程中也发现自己的编程短板（难道真的有天赋一说！？），只能转方向了，学的比较杂，但从往至今一直热爱的设计的确是我的一大长项和算是比较有天赋的，一直以来也没停止在设计上的追求。</p>
+<p><strong>一想到往后的日子就要专心于设计了，很舍不得flash和编程…</strong></p>
+<p>感慨一下，flash在几年前有了air之后是多么强大啊！但，现在终究是敌不过退出历史舞台的命运。我想主要一个原因是在10年air刚刚火时大家都没有抓住机会，缺少包括app开发、运营、用户在内的整个生态圈的建立。还有一个原因当然就是adobe公司的策略改变，</p>
+<p>摘一段来自于<a href="http://weibo.com/mu2587" target="_blank">@德义flasher木</a>的<a href="http://www.programmer.com.cn/13584/" target="_blank">文章</a>：</p>
+<blockquote>
+<p>Flash
+AIR最开始是Flash对于桌面应用的支持，在移动开发火热之后，AIR开始转变策略，转而为Flash内容的移动App打包进行支持，因为Android设备上允许安装AIR运行时，所以采用AIR打包为Android设备部署。Flash应用就变得顺理成章（虽然和桌面相比，内在运作机制还是很不同的）。当iOS拒绝了Flash Player进入之后，AIR又担负起了将Flash应用部署到iOS设备的重任（因为iOS不允许安装运行时，AIR针对iOS的打包策略和Android设备上又是完全不同的，需要直接编译出本地可执行代码，但为了统一平台起见，仍归属在AIR的范畴之内）。</p>
+<p>现在，Flash
+AIR的核心策略显然已转变为移动开发，而今年Adobe对AIR的开发支持更是空前的强力。加上Adobe在HTML层面对PhoneGap的投资，可以看出Adobe在移动策略上采用了Adobe AIR（for Flash）和PhoneGap（for HTML、JavaScript Developer）的双保险策略。</p>
+</blockquote>
+<p>但，对于我们这些大学生来说，毕竟专注学习的技术是要用于将来毕业后找工作的，而现阶段许多公司都开始从flash开发转其他开发技术了，也不像从前那么火热了，人员需求的减少就意味着要求更高，基本上都要求有一两年的工作经验，不是吗？能有老手谁还有兴趣带一个刚毕业的新手？</p>
+<p>所以，</p>
+<p>很感谢MornUI带给我三个多星期的愉快开发过程，以及感谢Morn交流群里一群flash开发者带来的欢乐，虽老不正经，但有问问题时就会立即热心地解答，很喜欢这个氛围，也是我唯一一个没有屏蔽的技术交流群…</p>
+<p>嗯，还是很喜欢flash呢~</p>
 
         
       </div>
@@ -366,7 +423,121 @@ UI，再做网站设计；做完这个GIMS软件；学好flash设计模式及后
         
           <p>第一次制作手机游戏，总的来说，给我的感觉还是不错的，从策划到美工，从设计到程序，其中遇到的困难也不少，这些困难包括技术上的，也包括团队上的。虽然同一个工作室，但自发团队免不了拖拉问题，一拖拉就拖慢了整个项目的进度，更严重的拖了太久就减淡整个团队的开发热情。另外还因为各自的空闲时间不一样，很难聚在一起，最多的只是在讨论组里讨论。
 一个项目没了热情，结果就注定是个坑。才刚做到了beta0.1，后面还有东西要加。</p>
-<p>技术上的话，困难也不大，但还是再做个技术相关的总结吧，横跨四个领域的总结！
+<p>技术上的话，困难也不大，但还是再做个技术相关的总结吧，横跨四个领域的总结！</p>
+<p><strong>一、策划</strong></p>
+<p>这次的策划是平面组的bobo和ck，虽然说是策划，但他们也不懂得该怎么做。</p>
+<blockquote>
+<p>“策划也不懂该干什么，相对于策划，其实我更希望能做有关设计或者画画的东西，只是能力不够而已。”——bobo</p>
+</blockquote>
+<p>作为项目总监，我根据我已知的制作游戏项目需要，分配给他们策划的任务：将游戏流程转化为“线框图”，整体完善游戏机制、玩法。其中还包括一些小讨论：输赢机制、游戏道具的添加、有新意的玩法等等。</p>
+<p>将游戏流程转化为线框图，这很重要，即对游戏策划的整体框架的确立，也帮助了程序员架构游戏程序。制作时是参考江南大学交互工作室的一些交互稿的，感觉他们的交互稿是很棒的，十分值得学习。</p>
+<p>游戏策划，这里总结一下，包括：</p>
+<ol>
+<li>游戏背景设计。游戏背景给玩家提供合合理的世界描述，使玩家在游戏过程中的行为受到限制并具有合理性。游戏世界观，包括：世界架构、人文地理、宗教信仰、政治、经济文化等的设定，用于突出情节、约束时空、明确风格。在世界观构架下，设定故事背景：关于游戏、游戏主角的故事背景。</li>
+<li>游戏地图与场景设计。设计并不是设计出来，而是说明有什么地图场景。</li>
+<li>游戏元素设计。主角，NPC，怪物（AI），道具。</li>
+<li>任务与关卡设计。</li>
+<li>游戏规则设计。包括数值策划，角色的属性等相关数值之间的平衡计算。另外还有战斗系统，换装系统等。</li>
+<li>界面与用户控制。用户如何控制，界面显示什么？</li>
+</ol>
+<p>最后就是将上面的总结成“游戏设计文档”，供团队使用。</p>
+<p>上面列了这么多，其实最重要的就是数值策划和游戏背景（故事）策划。</p>
+<p><strong>二、美工</strong></p>
+<p>先说一个奇怪的现象：设计师普遍不喜欢被叫作美工，而程序员从不在乎被叫作码农。</p>
+<p>其中的道理，大概只有我这种喜欢设计又喜欢代码的才懂的吧…</p>
+<p>1、所谓设计和美工是有较大区别的，设计师到了一定程度都会倾向于设计(design)这个高端、优雅的名词，而认为美工是涂涂画画，顶多做做游戏人设的。所以傲娇的设计师一旦被叫美工，就瞬觉自己身价掉了不止一点半点，当然不喜欢啦~
+2、而程序员，虽然苦逼，但也享受着苦逼的过程与结果，而码农正对了这苦逼的感觉，所以，程序员也不会在乎这名词了。
+3、最最最重要的一点是，设计师多是女生，而程序员多是男生… 回到正题。</p>
+<p>美工yano的画风如其人，是清新型的，让她画猥琐风感觉很受罪…最后画出来的已经很不错了！主要是效率高，赞！</p>
+<p>关于风格问题，yano是这样看的：</p>
+<blockquote>
+<p>刚进学生会时，真的完全接受不了部长的设计风格，可是自己的太可爱他们也接受不了，所以照着部长的意思在家里一边改海报一边很不开心，觉得自己好像成了别人的“工匠”一样。可是叻~后来坚持下去了，发现其实原来的自己真的太局限，从自己完全没想过的风格里也得到了启发，甚至很跃跃欲试的想去挑战去设计其他风格的东西。
+所以——
+不要再拿“这不是我的风格”当借口了，无论画画还是设计，画惯了动漫也可以挑战写实，看惯了小清新也可以尝试高端大气，有时候，风格问题说白了也是能力问题嘛。</p>
+</blockquote>
+<p>应“造福下一代”口号，yano妹子绞尽脑汁想找出一些东西，所以就来个pilipulu画风速成手记！</p>
+<p>“</p>
+<blockquote>
+<p>没错，出图那么快是有秘诀的！（当然最重要的一点还是因为我一点也不拖拉（？）……）</p>
+<ol>
+<li>粗略的在纸上或脑袋里画出线稿。
+其实这里画出来的稿子接下来也不需要扫描还是拍成照片到电脑用，但是想清楚了再开电脑才能事半功倍，否则的话对着屏幕再久也没用。</li>
+<li>直接进入Ps，用钢笔绘制矢量图层-线稿。
+为什么不把手稿导入再展开呢？因为觉得这种画风的一个特点就是随意，如果导入再来描反而会太依赖原有的线条太生硬了！（当然这里对钢笔工具的熟悉程度会有一定影响）
+<img src="http://i.imgur.com/G3UeZvh.png" alt=""><img src="http://i.imgur.com/7eAkh5i.png" alt="">
+举例子—— 这里要善用 <img src="http://i.imgur.com/ivWlGCp.png" alt=""> 
+，必要时分分图层，注意轮廓的粗细变化是不均匀的，也不用太讲求规律什么的，总之尽量随意，闭合起来后填充黑色【很抽象！</li>
+<li>上底色。在线稿层下建一个图层，反正会被挡掉的，所以涂底色时用多边形选框粗选就行了，为了配合游戏风格，选的都是饱和度高的底色。</li>
+<li>上阴影&amp;高光。
+风格需要，偷懒需要~接下来无论阴影高光都是有棱有角的，所以继续用多边形选框选取就行了~阴影的话直接用相同的灰度（如#a0a0a0）正片叠底一下就完事了~高光则用纯白色。
+<img src="http://i.imgur.com/P21fN2l.png" alt="辣椒"><img src="http://i.imgur.com/RZeI7nH.png" alt="厕纸"></li>
+</ol>
+</blockquote>
+<p><strong>三、设计</strong> </p>
+<p>设计很重要，设计的好坏，直接关系到一个游戏或网站的好坏。</p>
+<p>交互设计在ios、android、pc上有很大不同：参考<a href="http://udc.weibo.com/2012/11/pc%E3%80%81ios%E3%80%81android%E7%AD%89%E5%A4%9A%E5%B9%B3%E5%8F%B0%E9%80%9A%E7%94%A8%E6%80%A7%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83/" target="_blank">PC、iOS、Android等多平台通用性交互设计思考</a></p>
+<p>这次ck设计做到几点，很好：</p>
+<ol>
+<li>视觉风格上的统一。</li>
+<li>少即是多，简洁明了。</li>
+</ol>
+<p>另外，设计师是很需要灵感的，没有灵感是设计师不开工最常用的理由~
+而灵感来源于积累，积累有很多种方式。 </p>
+<p>ck的见解是：</p>
+<blockquote>
+<p>多借鉴，学会查找资料。各种设计的网站，每个网站都有每个网站的特色，比如优设是教网页的，站酷是分享作品的，花瓣是找各种灵感的，还有各种CG教学网站，各种资源网站……</p>
+</blockquote>
+<p>ps:游戏ui可参考<a href="http://www.uisheji.com/ui/game" target="_blank">UI设计网</a>。 </p>
+<p><strong>四、程序</strong></p>
+<p>总体来说，程序到目前为止还是比较简单的。 Flash
+air移动游戏开发，推荐学习开源游戏<a href="http://www.hungryherogame.com/" target="_blank"><a href="http://www.hungryherogame.com/">http://www.hungryherogame.com/</a></a>，以及作者的视频教程<a href="http://www.hsharma.com/tutorials/" target="_blank"><a href="http://www.hsharma.com/tutorials/">http://www.hsharma.com/tutorials/</a></a>。
+几个值得注意的地方：</p>
+<ol>
+<li>素材打包。
+由设计师及美工出了图（psd）后，交由我们切图，切图不想装ps的话推荐ImageReady，这是从ps独立出来的专门切片软件。
+然后使用<a href="http://www.codeandweb.com/texturepacker" target="_blank">TexturePacker</a>打包到一张纹理集合以及它的xml，供starling框架使用texture,这样减少资源的加载。</li>
+<li>游戏页面跳转。
+一直以为跳转是要remove元素的，实际上，和这想法不同，页面其实是刚开始就添加到舞台上了的，只是在某特定页面时，将其它页面所有元素visible属性为false，即将其隐藏起来，但其实是存在的。
+页面跳转是建一个NavigationEvent类（继承Event），自定义一个变量参数params，用于指定是哪个页面。通过事件侦听，switch判断params的值，作页面“跳转”。
+当点击按钮，如开始按钮，便派发事件（dispatchEvent），直接通知所有注册了的侦听器：params数值变成“play”了，然后作页面“跳转”操作。
+派发事件也就是事件调度，关于事件调度参照另一篇<a href="http://banx.web-113.com/?p=256" target="_blank">《Actionscript3事件调度与事件流》</a></li>
+<li>暂停方法。
+暂停方法没什么参考，自己开始想到的就是通过中间变量储存暂停时的一些相关数值，然后继续游戏时再赋回来。这个笨方法显然到了后面越多数值时很难控制，所以只好想个另外的方法。后来发现其实并不用储存一些数值，因为数值的判断计算放在一个Enterframe事件上，只要把Enterframe事件remove掉，数值就会“暂停”在那个状态。而其他一些动画则可以控制movieclip的暂停即可。
+暂停时要注意的是，点击（触摸）继续按钮时，也算是一次触摸操作，如果把触摸侦听注册在舞台上的话，角色就会飞跃一次，所以需要一个“游戏区域”（矩形）用于确认点击（触摸）操作。</li>
+<li>重力感应控制。
+重力感应用到flash.sensors.Accelerometer类，Accelerometer
+类根据由设备的运动传感器检测的活动调度事件。此数据表示设备的位置或沿三维轴的移动。当设备移动时，传感器会检测到此移动并返回加速数据。分为XYZ轴的加速，数值以
+G 为度量单位。（1 G 大约是 9.8 m/sec/sec。）。
+如何让重力感应更适合左右控制人物的操作，这很值得好好思考。</li>
+<li>触摸控制。
+使用starling的Touch类，touch包括了移动设备的触摸及鼠标的操作，不好的一点就是刚开始时未点击鼠标，鼠标移入就当作touch。后来发现TouchPhase类，即：一个触碰，在它的生命周期内会遵循下面的过程：BEGAN(开始)
+-> MOVED(移动) ->
+ENDED(结束)，还有一个称之为HOVER(悬停)的状态，这种情况只会发生在使用鼠标的情况下。
+所以Touch侦听事件加入一个状态判断，就解决了鼠标点击问题和触摸灵敏太高的问题：<pre class="brush:AS3">
+private function onTouch(e:TouchEvent):void
+{
+var touch:Touch = e.getTouch(stage);
+phase = touch.phase;
+if (phase == &quot;ended&quot;)
+{<pre><code>//触摸后的处理
+</code></pre>}
+}</pre></li>
+<li>道具设置。
+道具设置暂时采用一个数组（Vector）添加道具和遍历道具。</li>
+<li>道具触碰。
+道具触碰开始是想用starling里displayObject的hitTest方法的，不过试了一整天也不行，最后干脆用回最原始的方法，判断两对象的距离作碰撞检测，妥妥的TAT。</li>
+<li>自适应屏幕。
+适应分辨率参考<a href="http://www.starlinglib.com/wiki/StarlingManual:%E5%A4%9A%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87%E7%9A%84%E5%BC%80%E5%8F%91" target="_blank">StarlingManual:多屏幕分辨率的开发</a>，通过拉伸来适应屏幕大小：<pre class="brush:AS3">
+//自适应屏幕分辨率
+var screenWidth:int = stage.fullScreenWidth;
+var screenHeight:int = stage.fullScreenHeight;
+var viewPort:Rectangle = new Rectangle(0, 0, screenWidth, screenHeight);
+_st = new Starling(Game, stage, viewPort);
+</pre>
+
+</li>
+</ol>
+<p>感谢以上摘录的队员总结，让我更了解项目组的情况。</p>
 
         
       </div>
@@ -408,7 +579,81 @@ UI，再做网站设计；做完这个GIMS软件；学好flash设计模式及后
           <p>由于这两年来flash开发界的变化较大，html5时代的来临，让工作室Flash组面临着没有什么项目可做的困境，工作室flash组还是否需要存在?这个问题也让我这个flash组组长感到困扰。</p>
 <p>当然我是喜欢flash的，也坚信flash的优势。于是，在我这届，我决定改变flash组的方向，由原本的前端开发转变为现在的前端+移动端开发，并且应用范围也由原来的web动态效果转变为现在的web应用及游戏开发。这样以适应如今flash开发界的趋势。</p>
 <p>于是，便有了这个pulupulu这个手机游戏项目。项目开始到现在已有一个月了，终于在今天做出了beta 0.1版本，但只是一个demo。这里做一下这一个月来的开发记录，也算是一个中期经验总结吧。</p>
-<p>
+<blockquote>
+<h1 id="-alt-text-https-a248-e-akamai-net-camo-github-com-50f248402f9ab87dde401ff1d869376989151f3d-687474703a2f2f692e696d6775722e636f6d2f754474536933612e706e67-pulupulu-icon-https-a248-e-akamai-net-camo-github-com-50f248402f9ab87dde401ff1d869376989151f3d-687474703a2f2f692e696d6775722e636f6d2f754474536933612e706e67-pulupulu"><a href="https://a248.e.akamai.net/camo.github.com/50f248402f9ab87dde401ff1d869376989151f3d/687474703a2f2f692e696d6775722e636f6d2f754474536933612e706e67" target="_blank"><img src="https://a248.e.akamai.net/camo.github.com/50f248402f9ab87dde401ff1d869376989151f3d/687474703a2f2f692e696d6775722e636f6d2f754474536933612e706e67" alt="Alt text" title="Pulupulu Icon"></a>pulupulu</h1>
+<hr>
+<h4 id="-">游戏策划</h4>
+<ul>
+<li>主题：在天朝吃东西，难免食后腹泻肚痛，特殊情况不能上厕所，想放屁？难受难忍，那就尽情地放吧！</li>
+<li>背景：课堂上突然肚痛想放屁，却不能，苦逼，于是思绪yy飞出向上飞，吃番薯储存“屁能”，用来释放屁。途中捡道具、捡厕纸，收集黑宝石（打开异次元空间解决生理问题），收集厕纸可提高分数、买东西、提升技能等。直到飞到终点：梦想的厕所！</li>
+<li>玩法：触摸放屁，放屁产生反冲力向上飞，重力左右控制。</li>
+<li>道具：有番薯、辣椒、小鸟、厕纸、黑宝石等。</li>
+<li>输赢机制：高低决定分数，掉到屏幕底线以下且黑宝石数为零则输；</li>
+<li>设计风格：预期是找你妹的猎奇猥琐风格，但还是美工说的“画出什么就什么啦”。</li>
+</ul>
+<hr>
+<h4 id="-">特点</h4>
+<ol>
+<li>风格和谐，口味略重，关于放屁的游戏。</li>
+<li>玩法简单，轻松休闲。</li>
+<li>利用道具技能升级，人物换装，具有挑战性。</li>
+<li>不同的食物会有不同颜色的屁，传说能放出彩虹屁。</li>
+<li>工科男放屁是一门艺术，当达到一定的境界就能放出诸如N阶矩阵屁、向量屁、地图屁（参照地图炮）、三次元屁（相对于二次元）等。</li>
+<li>结合中国传统文化，诸如周易、道家、儒学等。</li>
+<li>……</li>
+</ol>
+<hr>
+<h4 id="-">开发细则</h4>
+<ol>
+<li>使用Actionscript3开发，结合<a href="http://gamua.com/starling/" title="Starling框架" target="_blank">Starling</a>框架以及<a href="http://dragonbones.github.io/" title="DragonBones" target="_blank">DragonBones</a>骨骼方案</li>
+<li>Adobe Air跨平台开发（android,ios,rim)</li>
+<li>使用Flash Develop开发工具
+3月27日，我正式提出了要做手机游戏这个想法，在此前我用了4周时间学习starling框架，并研究了一些游戏、手游的架构、策划、制作等知识，就等技术自认为差不多成熟的时候我提出了这想法。我当时就打算我只写程序，把美工、设计让出来，虽然我感觉自己能胜任，但一方面要形成团队合作的氛围，另一方面在手游设计上要锻炼一下工作室大一的同学。</li>
+</ol>
+</blockquote>
+<p>当天晚上，我召集了对我这个手游感兴趣的平面组大一的3个组员，在工作室讨论了游戏的整体策划及简单架构，人员的确立与相关的工作计划。</p>
+<p>策划：ck、bobo、程序：我、设计：ck、美工：LinkYano，当然，项目总监就是我啦~。</p>
+<blockquote>
+<p>这是工作室第一次做手游，毫无经验，计划做个玩法简单点的手机游戏，并进行“微创新”。即：简单而不简单。并实现跨平台（pc+android+ios）。
+<strong>第一周，</strong>我主要还是边学习边研究，并统筹整个项目的任务分配。并让flash组大一的ms加入，我带带他，且先让他熟悉一下starling框架。</p>
+</blockquote>
+<p>3月28日，想好代码实现的整体思路；为整个项目设定设计规范，以适应各分辨率尺寸屏幕，这里我决定以720*1280屏幕大小进行设计。</p>
+<p>3月29日，考虑如何适应各种分辨率屏幕，适应分辨率参考<a href="http://www.starlinglib.com/wiki/StarlingManual:%E5%A4%9A%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87%E7%9A%84%E5%BC%80%E5%8F%91" target="_blank">StarlingManual:多屏幕分辨率的开发</a>，通过拉伸来适应屏幕大小。</p>
+<p>3月30日，出奇的LinkYano妹子竟然熬夜把美工稿弄出来了，不得不说，当早上看到这个稿时充满喜感~~</p>
+<p><img src="https://trello-attachments.s3.amazonaws.com/5151c6f59169b08f2b001f3d/51530ca1622b8a463b0041af/f88e48371d6ad1c8a751996b59f6e8b9/%E6%9C%AA%E5%91%BD%E5%90%8D.jpg" alt="" title="美工最初稿"></p>
+<p>4月2日，在我的建议下LinkYano出了改稿，这猥琐的小鸟我喜欢~</p>
+<p><img src="https://trello-attachments.s3.amazonaws.com/5151c6f59169b08f2b001f3d/51530ca1622b8a463b0041af/9bd912849e638fd1b0cb0c4468009202/PILUPULU.jpg" alt="" title="美工第二稿"></p>
+<p>4月3日，清明放假了，放3天假，我没带电脑回去，因为我知道在家是做不了什么的，果然，3天各个都几乎没有进度。值得一提的是LinkYano美工有继续加了些道具。</p>
+<p>&nbsp;</p>
+<p><strong>第二周，</strong>没有UI单单测试代码是十分无趣的，在我一催再催之下，ck终于出了UI稿了，泪流满面的同时，开始正式写程序了。</p>
+<p>4月9日，游戏首页的UI初稿出来了，欣喜之下提出了一些意见。并于次日修改了。</p>
+<p>[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;259&quot;]<img src="https://trello-attachments.s3.amazonaws.com/5151c6f59169b08f2b001f3d/51530cd911dfd4c456002ef8/1250b4061b84011b85ba2570af381b79/%E9%A6%96%E9%A1%B52%E6%94%B9_(1" alt="">.jpg) 首页改稿[/caption]</p>
+<p>4月11日，我开始切图写游戏界面。</p>
+<p>4月13日，完成了游戏首页、游戏进行界面、暂停界面，并实现了之间的切换。</p>
+<p>4月14日，开始写游戏进行程序。完成了触摸控制飞跃和重力感应控制人物左右移动。LinkYano把icon画好了。</p>
+<p><strong>第三周，</strong>这周我由于周五考试要复习，就放下了这个游戏5天，转交给ms继续并指导一下他。</p>
+<p>4月15日，交代ms工作和确立编码规范。并指导其熟悉开发工具的使用。</p>
+<p>4月20日，ms此前是没什么进展的，只是熟悉了一下我写的代码。晚上我确立了一下分工，并将ms&quot;扶上岗“开始工作，解决了边界处理的bug。</p>
+<p>&nbsp;</p>
+<p><strong>第四周，</strong>状态全开写游戏进行程序。</p>
+<p>4月22日，写完了放屁。</p>
+<p>4月24日，修改了触摸控制的方法，让触摸不那么灵敏。并写完了道具设置，分数显示。</p>
+<p>4月26日，完成了道具碰撞，ms完成了能量条动画的控制。</p>
+<p>4月27日，我进行了代码整合，并优化了一些控制显示，以及修复一些bug。游戏到此为止终于可以玩了。</p>
+<p>4月28日，加入键盘控制，pc端可玩，修复了一些bug，修改了难度，此时游戏版本beta 0.1。</p>
+<p>&nbsp;</p>
+<p>要感谢<a href="https://trello.com" title="trello" target="_blank">trello</a>，进行这个项目的管理，并让我有机会作这样的流水账记录:)</p>
+<p>五一放假了，暂时告一段落。虽然中途有点坑，但我还是依然坚持。即使每天做这个东西的时间不多，中间还缺了一个星期，还有上星期4月21日老师要做个视频，被Ae搞烦了几天，最后跟老师说实在完不成，然后开心地全身心转战这游戏。这个星期，相当努力。几乎全身心都放在这个游戏上了。尤其写拾取道具的碰撞检测方法时，从下午2点到晚上11点，由于尝试starling的碰撞方法出现种种问题，几近崩溃。但在最后终于写好的时候几乎热泪盈眶了。</p>
+<p>这个项目是我负责的，对于大一各位的表现值得表扬，虽然他们当时答应下来只是随随便便地。LinkYano妹子最赞了，美工稿出得快，连icon也一教就会。还有ms虽然刚接触AS3没多长时间，但进步却是很快的，相信接下来能够帮上较大的忙~</p>
+<p>编程效率是个问题，我觉得自己是渣渣的，但有时状态一来就很快很高效。我认为编程速度更多的取决于你的思维逻辑，以及知识的积累。这点我体会很深。</p>
+<p>这项目到此，并不是结束，后续迭代以及进一步详细策划、修改优化UI设计的工作还等着我们，我们还要继续努力！</p>
+<p>&nbsp;</p>
+<hr>
+<p>测试版，试玩慎重：</p>
+<p>android：<a href="http://pan.baidu.com/share/link?shareid=513486&amp;uk=3925949692" title="http://pan.baidu.com/share/link?shareid=513486&amp;uk=3925949692" target="_blank">pan.baidu.com/share/link?shareid=513486&amp;uk=3925949692</a></p>
+<p>ios：<a href="http://pan.baidu.com/share/link?shareid=513016&amp;uk=3925949692" title="http://pan.baidu.com/share/link?shareid=513016&amp;uk=3925949692" target="_blank">pan.baidu.com/share/link?shareid=513016&amp;uk=3925949692</a></p>
+<p>pc：<a href="http://ftp142049.host115.web522.com/test/pulupulu/" title="http://ftp142049.host115.web522.com/test/pulupulu/" target="_blank">ftp142049.host115.web522.com/test/pulupulu/</a></p>
+
         
       </div>
       <footer><div class="article-comment">
@@ -459,7 +704,56 @@ UI，再做网站设计；做完这个GIMS软件；学好flash设计模式及后
 <p>*<a href="http://help.adobe.com/zh_CN/ActionScript/3.0_ProgrammingAS3/WS509D19BB-239B-4489-B965-844DDA611AE7.html" target="_blank">UV 映射</a>是一种纹理化对象的方法。它依赖于两个值：U 水平 (x) 值和 V 垂直 (y) 值。这两个值不是基于像素值，而是基于百分比。0 U 和 0 V 表示图像的坐上角，1 U 和 1 V 表示右下角
 &nbsp;</p>
 </blockquote>
-<p>那么，现在开始创建舞台元素玩玩了，如上一篇所讲，首先是创建启动类，然后在Game类中创建一个显示对象，建什么好呢？不妨查查API，starling.display，有Button、Image、MovieClip、Quad（四边形）以及其他一些容器。这里，我们创建一个button玩玩。
+<p>那么，现在开始创建舞台元素玩玩了，如上一篇所讲，首先是创建启动类，然后在Game类中创建一个显示对象，建什么好呢？不妨查查API，starling.display，有Button、Image、MovieClip、Quad（四边形）以及其他一些容器。这里，我们创建一个button玩玩。</p>
+<blockquote>
+<p>Button:</p>
+<p>一个简单的按钮由一张图片和一个可选的文本组成。</p>
+<p>你可以分别为按钮构造函数传递up和down两种状态的纹理。 如果你没有指定一个down状态的纹理，按钮会采用默认的办法：被触碰的时候缩小一点。 此外，你可以在按钮上覆盖一个文本，要自定义这个文本，只需要提供和原来的基本相同的文本框即可。 你可以使用<code>textBounds</code>属性，将文本移动到一个指定的位置。</p>
+<p>判断按钮是否被触碰，请使用<code>triggered</code>事件类型， 用这个事件来代替普通的触碰事件。也就是说，用户只要在松开手指或者鼠标之前，移动手指/鼠标离开按钮区域，就可以取消对该按钮的点击操作。
+&nbsp;</p>
+<p><pre class="brush:as3">package
+{
+    import starling.display.Button;
+    import starling.display.Sprite;
+    import starling.textures.Texture;</p>
+</blockquote>
+<pre><code>/**
+ * ...
+ * @author SHENGbanX
+ */
+public class Game7 extends Sprite
+{
+    [Embed(source = &quot;../assets/chicken.png&quot;)]
+    private static const Chicken:Class;
+    public function Game7()
+    {
+                    //通过Texture类中的静态方法fromBitmap来创建Texture纹理对象
+        var buttonTexture:Texture = Texture.fromBitmap(new Chicken());
+        var button:Button = new Button(buttonTexture, &quot;Hello Starling&quot;);
+        button.x = 200;
+        button.y = 200;
+                    addChild(button);
+    }
+
+}
+</code></pre><p>}</pre>
+自己用ps简单地画了一个小鸡作为按钮的图片纹理，加上文字。但这样文字刚好在图片上，所以要用<code>textBounds</code>属性，把文字移到一个地方。</p>
+<p>查api可知textBounds:Rectangle，Rectangle是flash.geom包（包中包含几何图形类（如点、矩形和转换矩阵）以支持 BitmapData 类和位图缓存功能。）里的一个类。</p>
+<p>而Rectangle 对象是按其位置（由它左上角的点 (x, y) 确定）以及宽度和高度定义的区域。</p>
+<p>加上button.textBounds = (0,50,100,100);</p>
+<p>但报错了，类型不对，Rectangle不是就4个数作属性吗？思来想去，还是去看看starling的源代码：</p>
+<p><pre class="brush:as3">        /<em>* The bounds of the textfield on the button. Allows moving the text to a custom position. </em>/
+        public function get textBounds():Rectangle { return mTextBounds.clone(); }
+        public function set textBounds(value:Rectangle):void
+        {
+            mTextBounds = value.clone();
+            createTextField();
+        }</pre>
+仔细研究了一下，发现还是应该是那样没错的，试了很多种方法，通过trace(button.textBounds)结果是(x=0, y=0, w=73, h=53),以这个做值或(x=0, y=0, width=73, height=53)也不行。</p>
+<p>最后这样才可以：</p>
+<p><pre class="brush:as3">button.textBounds = new Rectangle(0, 50, 73,53);</pre>
+&nbsp;</p>
+<p><strong>没有教程的时候，查API、源码等方法自己研究还是很不错的！学习Starling更需如此。</strong></p>
 
         
       </div>
@@ -532,7 +826,43 @@ public class Startup extends Sprite
 
 }
 </code></pre><p>}</pre>
-上面用核心starling类创建了starling对象_starling，然后用start方法启动它，这样，他就会按照设置好的信息[SWF...]渲染Game类了，Display显示列表和as原本的名字基本相似，所以容易混淆（常常自动填写代码错误...），但starling使用了stage3D，运行速度快。starling类还有其他用处，例如我常常就会习惯的加上_starling.showStats = true;来显示一些FPS和内存占用信息。
+上面用核心starling类创建了starling对象_starling，然后用start方法启动它，这样，他就会按照设置好的信息[SWF...]渲染Game类了，Display显示列表和as原本的名字基本相似，所以容易混淆（常常自动填写代码错误...），但starling使用了stage3D，运行速度快。starling类还有其他用处，例如我常常就会习惯的加上_starling.showStats = true;来显示一些FPS和内存占用信息。</p>
+<p>查API文档可以知道，starling类还可以：</p>
+<blockquote>
+<p><strong>访问Starling对象</strong></p>
+<p>在你的程序里，你可以在任意时间通过静态方法<code>Starling.current</code>访问当前的Starling对象。它会返回 当前活跃的Starling实例（实际上大多数程序只会有一个Starling对象）。</p>
+<p><strong>观察口，视口</strong></p>
+<p>即是Starling内容渲染显示的范围，默认情况下是舞台大小。但是，你可以使用“viewport”属性去改变它。当你只想在屏幕的一部分中 渲染，或者播放器大小改变时，这个属性非常有用。随后你可以监听由Starling舞台发出的RESIZE事件。</p>
+<p><strong>原生Flash叠加层</strong></p>
+<p>有时你会想在Starling上面显示一些原生Flash内容，这就是<code>nativeOverlay</code>属性的作用。它返回的是在Starling之上 的原生FLash Sprite。你可以在叠加层内添加原生Flash对象。</p>
+<p>但是需要注意，在3D加速内容之上的原生Flash内容在某些（移动）平台上会有性能上的问题。因为这个原因，请注意删除这一层中所有 不需要和不再使用的对象。当这一层被置空后Starling会从显示列表中删除原生Flash叠加层。</p>
+<p><strong>多点触摸</strong></p>
+<p>对于提供支持多点触摸功能的设备，Starling也支持这项功能。在开发过程中，我们大多数基本上都是使用鼠标的键盘，Starling可以 在“Shift”和“Ctrl”的帮助下（Mac苹果机是“Cmd”）模拟实现多点触摸事件。启动<code>simulateMultitouch</code>属性就可以激活 这个功能。</p>
+<p><strong>处理丢失的渲染内容</strong></p>
+<p>在某些系统和某些条件下（例如，从系统睡眠中返回），Starling的stage3D渲染内容会丢失。如果类属性“handleLostContext” 设置为 “true” Starling会自动修复丢失内容。但是需要注意，这是以提高内存消耗为代价的。Starling会在内存中创建纹理缓存，这样 在内容丢失时才可以修复它。</p>
+<p>如果你想和丢失的内容交互，Starling在这个内容修复时发送&quot;Event.CONTEXT3D_CREATE&quot;事件，你可以在相对应的事件<strong><strong>*</strong></strong>中重新 创建这些不可用资源.</p>
+<p><strong>共享三维加速内容</strong></p>
+<p>正常情况下，Starling是独立处理stage3d加速内容。如果你想让Starling和其它的stage3d引擎同时使用，可能会达不到你需要的效果。 在这种情况下，你可以使用<code>shareContext</code>属性:</p>
+<ol>
+<li>手动创建和定义一个让两个框架公用的context3D对象 (通过<code>stage3D.requestContext3D</code> 和 <code>context.configureBackBuffer</code>)创建.</li>
+<li>使用已经定义了的context3d对象的stage3d实例来初始化Starling。 这样做会自动启用 <code>shareContext</code>.</li>
+<li>调用Starling实例的 <code>start()</code>(与往常一样). 这样做是让 Starling 对事件监听进行排队处理 (keyboard/mouse/touch).</li>
+<li>创建一个游戏逻辑（例如，使用原生的<code>ENTER_FRAME</code>事件）然后让它调用Starling的 <code>nextFrame</code>同时调用其它Stage3D引擎的同功能方法 . 相关类型的方法还有<code>context.clear()</code> 和 <code>context.present()</code>.
+&nbsp;</li>
+</ol>
+</blockquote>
+<p>接着新建一个Game类，</p>
+<p><pre class="brush:as3">import starling.display.Sprite;
+import starling.text.TextField;</p>
+<p>public class Game extends Sprite
+{
+    public function Game()
+    {
+        var textField:TextField = new TextField(400, 300, &quot;Hello Starling!&quot;);
+        addChild(textField);
+    }
+}</pre>
+一贯的hello world啦~然后把启动类Startup设为文档类，就可以测试了，一般都能测试成功了，当然，要注意调用的是flash的还是starling的方法。</p>
 
         
       </div>

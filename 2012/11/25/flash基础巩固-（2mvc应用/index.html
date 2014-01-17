@@ -116,9 +116,8 @@
 <p>这两天在了解MVC的应用。感觉mvc是对于一些较大的项目开发比较实用，将程序划分为model、view、control，将有利于对代码的维护、改进，开发起来更加有条理性。model作为模型，创建了程序需要的数据；view视图呈现给用户交互的界面，监听及调用control方法，改变model数据。mvc化能降低程序的耦合度*，使程序模式化。</p>
 <p>其中mvc在flash应用中较出名的就是PureMVC了。</p>
 <p>PureMVC，就如同它的名字是，它是一个纯粹的小巧的MVC框架，支持多语言。其中支持as2、as3。</p>
-<p>PureMVC中还有另外一个单例模式类——Facade，Facade提供了与核心层通信的唯一接口，以简化开发复杂度。
-<a id="more"></a>
-Facade（观察者）统领着MVC三大结构，可以注册、销毁、查询command、proxy、mediator
+<p>PureMVC中还有另外一个单例模式类——Facade，Facade提供了与核心层通信的唯一接口，以简化开发复杂度。</p>
+<p>Facade（观察者）统领着MVC三大结构，可以注册、销毁、查询command、proxy、mediator
 Command（命令）用以操作接受Notification（通知），然后执行相应的动作
 Proxy（数据代理）负责提供数据的访问和修改接口，同时随时发布相应的通知告诉外界。
 Mediator（视图媒介）负责将界面展现出来，提供用户界面等等，它不但可以接收通知，也可以往外发送通知。

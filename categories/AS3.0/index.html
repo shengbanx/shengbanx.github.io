@@ -137,7 +137,22 @@ UI设计之初就以高性能为主要目标，以位图为基础，利用延迟
 <li>Morn比flex轻量高效，比flash</li>
 </ol>
 <p>新版本已经全面支持移动设备开发了，其作者<a href="http://weibo.com/newyung" target="_blank">yungzhu</a>是个热心人（在q群上~），在官博上有<a href="http://blog.mornui.com/?p=563" target="_blank">demo</a>和<a href="http://blog.mornui.com/?p=514" target="_blank">使用教程</a>，还有<a href="http://www.mornui.com/doc/2.4/" target="_blank">在线API文档</a>大概一个下午就能摸熟，上手不难，但一经上手，你就会深深地爱上了它！（这是所有第一次使用的人的共识，但因为Morn
-UI还在不断完善，所以随着深入开发你就会发现其坑之多，且陷入其中，“其乐融融”！）
+UI还在不断完善，所以随着深入开发你就会发现其坑之多，且陷入其中，“其乐融融”！）</p>
+<h2 id="-"><strong>使用感受</strong></h2>
+<p>首先还是得感谢Morn UI带给我的“愉悦”开发过程（真心的），在近一个月的时间的GIMS开发过程中，按照规划开发一个个功能界面，都能在Morn UI库对应找到相关的组件、相关的函数可供调用。但总有一些时候会发现并没有这个实现方法，所以这个时候你就要到官方Morn交流群（官网有）里大吼一声，刚刚还在相互吹水的各位“大神”就会停下来给你解答，解答有时还会很热心的让你截图一步步找出解决办法，等没问题了，继续吹水~很喜欢这个氛围，虽然大家看起来都老不正经，但确是个热心的交流群（欢迎更多的人加入这个大家庭~）。</p>
+<p>Morn本身UI组件库就封装好了常用的UI组件和其需要用到的功能函数，加上其可视化编辑器，对于UI布局和功能开发真的很方便，下面简单地说几点：</p>
+<ol>
+<li><strong>UI组件切图。</strong>根据各个组件的不同，你需要相应的按照规定格式切出来，并按规定命名，规定格式及命名方式可以下载官方demo上面的UI资源查看或查看官方教程。一般是UI的3个状态（main、hover、pressed）按三等分上下排布，切成png。如button、checkBox、tab。（如下图）
+<img src="https://trello-attachments.s3.amazonaws.com/526899a67f73081b27001be1/52689a13874be19a6e0038b9/c596d9b45a6c3ee21feda68b056af10c/UI%E7%BB%84%E4%BB%B6%E5%88%87%E5%9B%BE.jpg" alt="UI组件切图"></li>
+<li><strong>“写”界面。</strong>直接使用Morn
+Builder，将切好的UI组件“导入”，通过这个可视化编辑器，根据需要调整相应参数，导出即可生成写好的UI代码。（参照Morn
+UI教程）</li>
+<li><strong>写功能逻辑代码。</strong>这个我是开始贪快直接将所有功能写在页面的as里（说好的MVC呢），后来到后面发现越来越累赘，想重构成MVC模式的发现很难了T^T。结果导致代码最后达到1000多行…我的错，所以最好在最开始就将该有的相关组件UI、界面分开来（不会的还是参照官方demo源文件）。</li>
+<li><strong>组件功能的不足。</strong>例如，写表单时，表单输入框的文本提示功能是没有的，需要自己写获取焦点失去焦点的提示文本代码。还有在写list时发现，选中操作不好写，List类没提供相关的监听函数，需要自己写。后来发现新版本改进了，但因为已经进行到一半，试了下更新UI库，结果就出问题了，还好git还原回来了。还有其他一些坑，迟些再补充。</li>
+</ol>
+<p>大概这么多，回到期末备考大军中去了，想深入了解Morn
+UI还是直接看其源代码最快。</p>
+<p>另外还有一篇别人写的不错的<a href="http://bbs.9ria.com/forum.php?mod=viewthread&amp;tid=194517&amp;highlight=morn" target="_blank">使用心得</a>，对编辑器原理和界面管理的一些分析,可以看看。</p>
 
         
       </div>
@@ -195,7 +210,49 @@ UI还在不断完善，所以随着深入开发你就会发现其坑之多，且
 pro，想着这样开发会不会快捷一点，界面是很容易出来了，但是里面的控件得自己写，爽了一下这个不可操作的软件后，便否定了这个方案。</p>
 <p>后来尝试了下flex开发，用flash
 builder，但很久没用的原因，在写界面的时候，卡在了一个地方，很难写，也否定了这个方案。</p>
-<p>接着想有什么UI库可以用，便想起了之前没怎么关注的<a href="http://www.mornui.com/" target="_blank">MornUI</a>，花了一个下午的时间研究了下MornUI的开发过程，试了一下做界面，发现很简单！超级方便！立刻爱上了MornUI了，但很快便遇到问题了，加了MornUI的官方交流群问，大家都很热情解答~问题很快就解决了。关于MornUI开发过程将在下一篇文章中介绍到。
+<p>接着想有什么UI库可以用，便想起了之前没怎么关注的<a href="http://www.mornui.com/" target="_blank">MornUI</a>，花了一个下午的时间研究了下MornUI的开发过程，试了一下做界面，发现很简单！超级方便！立刻爱上了MornUI了，但很快便遇到问题了，加了MornUI的官方交流群问，大家都很热情解答~问题很快就解决了。关于MornUI开发过程将在下一篇文章中介绍到。</p>
+<h2 id="-"><strong>第一周</strong></h2>
+<p>这周开始几天基本上是查阅了AIR开发文档，切图（为适应MornUI开发的特别切图），也没再麻烦设计师了，我自己搞掂了（会ps就是那么简单自信），使用MornUI自带可视化界面编辑工具Morn
+Builder做界面，项目代码逻辑是在FlashDevelop上写。很快，把一个像样的界面做出来了。（幸福来得那么突然~）</p>
+<p>这周刚好赶上电工实训，闲的时间比较多（把实验要求的任务做完后除了给老师检查基本上是自由时间了），每天都是从宿舍——饭堂——实验楼——综合楼之间往返（走路…），乐在其中，一心只想着这个项目，开发热情空前的高！</p>
+<p>在写完大体的界面后，因为是自定义窗口，相对于使用系统的自带窗口麻烦很多，自适应大小变化、拉伸、窗口按钮（最小化、最大化、关闭）操作都得自己写。</p>
+<p>参考了<a href="http://www.68design.net/Web-Guide/Flash/46381-1.html" target="_blank">Air窗口的外观修饰</a>和<a href="http://help.adobe.com/zh_CN/AIR/1.5/devappsflex/WS5b3ccc516d4fbf351e63e3d118666ade46-7e09.html" target="_blank">Air开发文档-窗口部分</a>，但还是存在问题，例如最大化、窗口适应大小比那话，不停尝试困扰了一段时间后，就此放弃…</p>
+<p>在基本写完界面，熟悉了MornUI的开发后，在周四就将其pull上github作项目管理与版本控制。这时界面左侧的工具栏按钮有点问题（后来才知道因为图案没设置好是否接受鼠标，遮挡住按钮的获取鼠标），以及中间的列表没写，只有一个大致的界面窗口。</p>
+<p>之后按照项目规划（自己定的），周五先完成drawer控件(切图、在Morn
+Builder上制作UI），其中MornUI的不熟悉还是遇到了一点问题。</p>
+<p>周六先建立数据库，准备储存新建的信息以及作为list列表的数据。以及数据库操作方法的建立。这里参考了<a href="http://www.ityangba.com/thread-483-1-1.html">Adobe
+AIR中的 SQLite
+数据库简介</a>和<a href="http://www.ityangba.com/thread-483-1-1.html" target="_blank">AIR连接本地数据库的CRUD实例</a>。</p>
+<p>好了，为了写新建信息功能，周日在写drawer新建的表单时遇到坑了，这个表单没有提示信息的方法，得自己写获取焦点、失去焦点的方法。</p>
+<h2 id="-"><strong>第二周</strong></h2>
+<p>周一将一个完整的表单（含提示信息功能）写好了之后，周二将数据库再修整完善了一下，周三实现新建信息存入数据库功能，周四写好了list列表，并能接收到数据库的数据。</p>
+<p>之后就是各种完善数据库操作及列表、drawer功能（不熟悉数据库的后果T\^T）。</p>
+<p>初次尝试了匹配文件功能进行文件操作，AIr很容易实现。参考：<a href="http://help.adobe.com/zh_CN/AIR/1.5/devappsflex/WS5b3ccc516d4fbf351e63e3d118666ade46-7dbb.html" target="_blank">air开发文档</a></p>
+<p>中间少不了一两次写到兴奋处舍不得回宿舍，直接在工作室通宵，天寒地冻的，一件短袖~</p>
+<h2 id="-"><strong>第三周</strong></h2>
+<p>第三周因为电工实训结束了，回到了课业苦海中，开发放松了很多，闲暇的将功能写完善，包括drawer的显示详细信息功能、编辑更改原有信息功能、匹配文件功能、搜索功能，大致上就差不多完成全部了。（想象中）</p>
+<h2 id="-"><strong>第四周</strong></h2>
+<p>一样由于接近完成，放松了很多，结果，第四周还剩余的两三个模块就是大坑，代码开始偷懒，项目没采用MVC，临时改也花了几天没重构好。</p>
+<p>将剩余的功能完善好，就在周末的女生节活动前各种拼命完善，寻找替代功能，在周五发布软件，icon还是用我做着玩的那个，然后晚上找bug，修bug到天亮（期间还弄了个介绍并提供在线安装的<a href="http://blog.vtmer.com/demo/gims" target="_blank">网页</a>…）</p>
+<h2 id="-"><strong>实际应用</strong></h2>
+<p>还好啦，在11月16日周六早上，看着真正投入使用就像自己孩子出生一样欣慰，但早上使用中反映各种bug（在我电脑上测试时明明没的！），上午再修改了下，中午带着疲惫的双眼到活动摊位玩了一下，看看实际使用中的情况，接着就回去安心地补眠了~</p>
+<p>晚上将剩余的导出表格功能写好，第二天也比较轻松，下午在女生节活动里玩了很久~晚上写数据库合并功能又失败了，后来是采用人工合并的替代方案…</p>
+<h2 id="-"><strong>后记</strong></h2>
+<p>我将这次视为封山之作…显然还不算，我的\
+flash开发还没学到位，编程模式还是渣，基础也不行了。但没办法，紧接着下学期找实习了，flash这块现阶段是基本上找不到好实习的。在做这个air应用的过程中也发现自己的编程短板（难道真的有天赋一说！？），只能转方向了，学的比较杂，但从往至今一直热爱的设计的确是我的一大长项和算是比较有天赋的，一直以来也没停止在设计上的追求。</p>
+<p><strong>一想到往后的日子就要专心于设计了，很舍不得flash和编程…</strong></p>
+<p>感慨一下，flash在几年前有了air之后是多么强大啊！但，现在终究是敌不过退出历史舞台的命运。我想主要一个原因是在10年air刚刚火时大家都没有抓住机会，缺少包括app开发、运营、用户在内的整个生态圈的建立。还有一个原因当然就是adobe公司的策略改变，</p>
+<p>摘一段来自于<a href="http://weibo.com/mu2587" target="_blank">@德义flasher木</a>的<a href="http://www.programmer.com.cn/13584/" target="_blank">文章</a>：</p>
+<blockquote>
+<p>Flash
+AIR最开始是Flash对于桌面应用的支持，在移动开发火热之后，AIR开始转变策略，转而为Flash内容的移动App打包进行支持，因为Android设备上允许安装AIR运行时，所以采用AIR打包为Android设备部署。Flash应用就变得顺理成章（虽然和桌面相比，内在运作机制还是很不同的）。当iOS拒绝了Flash Player进入之后，AIR又担负起了将Flash应用部署到iOS设备的重任（因为iOS不允许安装运行时，AIR针对iOS的打包策略和Android设备上又是完全不同的，需要直接编译出本地可执行代码，但为了统一平台起见，仍归属在AIR的范畴之内）。</p>
+<p>现在，Flash
+AIR的核心策略显然已转变为移动开发，而今年Adobe对AIR的开发支持更是空前的强力。加上Adobe在HTML层面对PhoneGap的投资，可以看出Adobe在移动策略上采用了Adobe AIR（for Flash）和PhoneGap（for HTML、JavaScript Developer）的双保险策略。</p>
+</blockquote>
+<p>但，对于我们这些大学生来说，毕竟专注学习的技术是要用于将来毕业后找工作的，而现阶段许多公司都开始从flash开发转其他开发技术了，也不像从前那么火热了，人员需求的减少就意味着要求更高，基本上都要求有一两年的工作经验，不是吗？能有老手谁还有兴趣带一个刚毕业的新手？</p>
+<p>所以，</p>
+<p>很感谢MornUI带给我三个多星期的愉快开发过程，以及感谢Morn交流群里一群flash开发者带来的欢乐，虽老不正经，但有问问题时就会立即热心地解答，很喜欢这个氛围，也是我唯一一个没有屏蔽的技术交流群…</p>
+<p>嗯，还是很喜欢flash呢~</p>
 
         
       </div>
@@ -312,7 +369,56 @@ builder，但很久没用的原因，在写界面的时候，卡在了一个地�
 <p>*<a href="http://help.adobe.com/zh_CN/ActionScript/3.0_ProgrammingAS3/WS509D19BB-239B-4489-B965-844DDA611AE7.html" target="_blank">UV 映射</a>是一种纹理化对象的方法。它依赖于两个值：U 水平 (x) 值和 V 垂直 (y) 值。这两个值不是基于像素值，而是基于百分比。0 U 和 0 V 表示图像的坐上角，1 U 和 1 V 表示右下角
 &nbsp;</p>
 </blockquote>
-<p>那么，现在开始创建舞台元素玩玩了，如上一篇所讲，首先是创建启动类，然后在Game类中创建一个显示对象，建什么好呢？不妨查查API，starling.display，有Button、Image、MovieClip、Quad（四边形）以及其他一些容器。这里，我们创建一个button玩玩。
+<p>那么，现在开始创建舞台元素玩玩了，如上一篇所讲，首先是创建启动类，然后在Game类中创建一个显示对象，建什么好呢？不妨查查API，starling.display，有Button、Image、MovieClip、Quad（四边形）以及其他一些容器。这里，我们创建一个button玩玩。</p>
+<blockquote>
+<p>Button:</p>
+<p>一个简单的按钮由一张图片和一个可选的文本组成。</p>
+<p>你可以分别为按钮构造函数传递up和down两种状态的纹理。 如果你没有指定一个down状态的纹理，按钮会采用默认的办法：被触碰的时候缩小一点。 此外，你可以在按钮上覆盖一个文本，要自定义这个文本，只需要提供和原来的基本相同的文本框即可。 你可以使用<code>textBounds</code>属性，将文本移动到一个指定的位置。</p>
+<p>判断按钮是否被触碰，请使用<code>triggered</code>事件类型， 用这个事件来代替普通的触碰事件。也就是说，用户只要在松开手指或者鼠标之前，移动手指/鼠标离开按钮区域，就可以取消对该按钮的点击操作。
+&nbsp;</p>
+<p><pre class="brush:as3">package
+{
+    import starling.display.Button;
+    import starling.display.Sprite;
+    import starling.textures.Texture;</p>
+</blockquote>
+<pre><code>/**
+ * ...
+ * @author SHENGbanX
+ */
+public class Game7 extends Sprite
+{
+    [Embed(source = &quot;../assets/chicken.png&quot;)]
+    private static const Chicken:Class;
+    public function Game7()
+    {
+                    //通过Texture类中的静态方法fromBitmap来创建Texture纹理对象
+        var buttonTexture:Texture = Texture.fromBitmap(new Chicken());
+        var button:Button = new Button(buttonTexture, &quot;Hello Starling&quot;);
+        button.x = 200;
+        button.y = 200;
+                    addChild(button);
+    }
+
+}
+</code></pre><p>}</pre>
+自己用ps简单地画了一个小鸡作为按钮的图片纹理，加上文字。但这样文字刚好在图片上，所以要用<code>textBounds</code>属性，把文字移到一个地方。</p>
+<p>查api可知textBounds:Rectangle，Rectangle是flash.geom包（包中包含几何图形类（如点、矩形和转换矩阵）以支持 BitmapData 类和位图缓存功能。）里的一个类。</p>
+<p>而Rectangle 对象是按其位置（由它左上角的点 (x, y) 确定）以及宽度和高度定义的区域。</p>
+<p>加上button.textBounds = (0,50,100,100);</p>
+<p>但报错了，类型不对，Rectangle不是就4个数作属性吗？思来想去，还是去看看starling的源代码：</p>
+<p><pre class="brush:as3">        /<em>* The bounds of the textfield on the button. Allows moving the text to a custom position. </em>/
+        public function get textBounds():Rectangle { return mTextBounds.clone(); }
+        public function set textBounds(value:Rectangle):void
+        {
+            mTextBounds = value.clone();
+            createTextField();
+        }</pre>
+仔细研究了一下，发现还是应该是那样没错的，试了很多种方法，通过trace(button.textBounds)结果是(x=0, y=0, w=73, h=53),以这个做值或(x=0, y=0, width=73, height=53)也不行。</p>
+<p>最后这样才可以：</p>
+<p><pre class="brush:as3">button.textBounds = new Rectangle(0, 50, 73,53);</pre>
+&nbsp;</p>
+<p><strong>没有教程的时候，查API、源码等方法自己研究还是很不错的！学习Starling更需如此。</strong></p>
 
         
       </div>
@@ -385,7 +491,43 @@ public class Startup extends Sprite
 
 }
 </code></pre><p>}</pre>
-上面用核心starling类创建了starling对象_starling，然后用start方法启动它，这样，他就会按照设置好的信息[SWF...]渲染Game类了，Display显示列表和as原本的名字基本相似，所以容易混淆（常常自动填写代码错误...），但starling使用了stage3D，运行速度快。starling类还有其他用处，例如我常常就会习惯的加上_starling.showStats = true;来显示一些FPS和内存占用信息。
+上面用核心starling类创建了starling对象_starling，然后用start方法启动它，这样，他就会按照设置好的信息[SWF...]渲染Game类了，Display显示列表和as原本的名字基本相似，所以容易混淆（常常自动填写代码错误...），但starling使用了stage3D，运行速度快。starling类还有其他用处，例如我常常就会习惯的加上_starling.showStats = true;来显示一些FPS和内存占用信息。</p>
+<p>查API文档可以知道，starling类还可以：</p>
+<blockquote>
+<p><strong>访问Starling对象</strong></p>
+<p>在你的程序里，你可以在任意时间通过静态方法<code>Starling.current</code>访问当前的Starling对象。它会返回 当前活跃的Starling实例（实际上大多数程序只会有一个Starling对象）。</p>
+<p><strong>观察口，视口</strong></p>
+<p>即是Starling内容渲染显示的范围，默认情况下是舞台大小。但是，你可以使用“viewport”属性去改变它。当你只想在屏幕的一部分中 渲染，或者播放器大小改变时，这个属性非常有用。随后你可以监听由Starling舞台发出的RESIZE事件。</p>
+<p><strong>原生Flash叠加层</strong></p>
+<p>有时你会想在Starling上面显示一些原生Flash内容，这就是<code>nativeOverlay</code>属性的作用。它返回的是在Starling之上 的原生FLash Sprite。你可以在叠加层内添加原生Flash对象。</p>
+<p>但是需要注意，在3D加速内容之上的原生Flash内容在某些（移动）平台上会有性能上的问题。因为这个原因，请注意删除这一层中所有 不需要和不再使用的对象。当这一层被置空后Starling会从显示列表中删除原生Flash叠加层。</p>
+<p><strong>多点触摸</strong></p>
+<p>对于提供支持多点触摸功能的设备，Starling也支持这项功能。在开发过程中，我们大多数基本上都是使用鼠标的键盘，Starling可以 在“Shift”和“Ctrl”的帮助下（Mac苹果机是“Cmd”）模拟实现多点触摸事件。启动<code>simulateMultitouch</code>属性就可以激活 这个功能。</p>
+<p><strong>处理丢失的渲染内容</strong></p>
+<p>在某些系统和某些条件下（例如，从系统睡眠中返回），Starling的stage3D渲染内容会丢失。如果类属性“handleLostContext” 设置为 “true” Starling会自动修复丢失内容。但是需要注意，这是以提高内存消耗为代价的。Starling会在内存中创建纹理缓存，这样 在内容丢失时才可以修复它。</p>
+<p>如果你想和丢失的内容交互，Starling在这个内容修复时发送&quot;Event.CONTEXT3D_CREATE&quot;事件，你可以在相对应的事件<strong><strong>*</strong></strong>中重新 创建这些不可用资源.</p>
+<p><strong>共享三维加速内容</strong></p>
+<p>正常情况下，Starling是独立处理stage3d加速内容。如果你想让Starling和其它的stage3d引擎同时使用，可能会达不到你需要的效果。 在这种情况下，你可以使用<code>shareContext</code>属性:</p>
+<ol>
+<li>手动创建和定义一个让两个框架公用的context3D对象 (通过<code>stage3D.requestContext3D</code> 和 <code>context.configureBackBuffer</code>)创建.</li>
+<li>使用已经定义了的context3d对象的stage3d实例来初始化Starling。 这样做会自动启用 <code>shareContext</code>.</li>
+<li>调用Starling实例的 <code>start()</code>(与往常一样). 这样做是让 Starling 对事件监听进行排队处理 (keyboard/mouse/touch).</li>
+<li>创建一个游戏逻辑（例如，使用原生的<code>ENTER_FRAME</code>事件）然后让它调用Starling的 <code>nextFrame</code>同时调用其它Stage3D引擎的同功能方法 . 相关类型的方法还有<code>context.clear()</code> 和 <code>context.present()</code>.
+&nbsp;</li>
+</ol>
+</blockquote>
+<p>接着新建一个Game类，</p>
+<p><pre class="brush:as3">import starling.display.Sprite;
+import starling.text.TextField;</p>
+<p>public class Game extends Sprite
+{
+    public function Game()
+    {
+        var textField:TextField = new TextField(400, 300, &quot;Hello Starling!&quot;);
+        addChild(textField);
+    }
+}</pre>
+一贯的hello world啦~然后把启动类Startup设为文档类，就可以测试了，一般都能测试成功了，当然，要注意调用的是flash的还是starling的方法。</p>
 
         
       </div>
@@ -496,7 +638,46 @@ public class Startup extends Sprite
 <p>这两天在了解MVC的应用。感觉mvc是对于一些较大的项目开发比较实用，将程序划分为model、view、control，将有利于对代码的维护、改进，开发起来更加有条理性。model作为模型，创建了程序需要的数据；view视图呈现给用户交互的界面，监听及调用control方法，改变model数据。mvc化能降低程序的耦合度*，使程序模式化。</p>
 <p>其中mvc在flash应用中较出名的就是PureMVC了。</p>
 <p>PureMVC，就如同它的名字是，它是一个纯粹的小巧的MVC框架，支持多语言。其中支持as2、as3。</p>
-<p>PureMVC中还有另外一个单例模式类——Facade，Facade提供了与核心层通信的唯一接口，以简化开发复杂度。
+<p>PureMVC中还有另外一个单例模式类——Facade，Facade提供了与核心层通信的唯一接口，以简化开发复杂度。</p>
+<p>Facade（观察者）统领着MVC三大结构，可以注册、销毁、查询command、proxy、mediator
+Command（命令）用以操作接受Notification（通知），然后执行相应的动作
+Proxy（数据代理）负责提供数据的访问和修改接口，同时随时发布相应的通知告诉外界。
+Mediator（视图媒介）负责将界面展现出来，提供用户界面等等，它不但可以接收通知，也可以往外发送通知。
+Notification（通知） 这相当于常用的Event，不过功能更强，用以触发Command或者Mediator的处理。而且因为封装过，不会过多依赖开发语言。</p>
+<p><strong>Model 与 Proxy</strong></p>
+<p>Model保存对Proxy对象的引用，Proxy负责操作数据模型，与远程服务通信存取数据。</p>
+<p>这样保证了Model层的可移植性。</p>
+<p><strong>View 与 Mediator</strong></p>
+<p><div> View保存对Mediator对象的引用。由Mediator对象来操作具体的视图组件（View Component，例如Flex的DataGrid组件），包括：添加事件<strong><strong>*</strong></strong>，发送或接收Notification ，直接改变视图组件的状态。</div></p>
+<p><div> 这样做实现了把视图和控制它的逻辑分离开来。</div>
+<strong>Controller 与 Command</strong></p>
+<p><div> Controller保存所有Command的映射。Command类是无状态的，只在需要时才被创建。</div>
+Command可以获取Proxy对象并与之交互，发送Notification，执行其他的Command。经常用于复杂的或系统范围的操作，如应用程序的“启动”和“关闭”。应用程序的业务逻辑应该在这里实现。</p>
+<p><strong>Facade 与 Core</strong></p>
+<p><div> Facade类应用单例模式，它负责初始化核心层（Model，View和Controller），并能访问它们的Public方法。</div></p>
+<p><div> 这样，在实际的应用中，你只需继承Facade类创建一个具体的Facade类就可以实现整个MVC模式，并不需要在代码中导入编写Model，View和Controller类。</div>
+Proxy、Mediator和Command就可以通过创建的Facade类来相互访问通信。</p>
+<p><strong>Observer 与 Notification</strong></p>
+<p>PureMVC的通信并不采用Flash的EventDispatcher/Event，因为PureMVC可能运行在没有Flash Event和EventDispatcher类的环境中，它的通信是使用观察者模式以一种松耦合的方式来实现的。你可以不用关心PureMVC的Observer/Notification机制是怎么实现的，它已经在框架内部实现了。你只需要使用一个非常简单的方法从Proxy, Mediator, Command和Facade发送Notification，甚至不需要创建一个Notification实例。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>小记：</strong>我对PureMVC的学习实在太浅了，很多都还只停留在认知程度，还没用于实践，当然，实践实践，还是需要时间的~flash还有很多东西要去学，不能一口吃成一个胖子，mvc作为一种编程思想，很考验程序员的逻辑思维，我自认这方面也一般般，总是想东西想到头大:P，嗯，对了，还有一个flash的mvc框架——Robotlegs，机器人双脚，哈~还是要很努力才行，yeah！寒假快到了，工作室又得招收新鲜血液了！我要多多准备，期待下一次真正的团队开发！</p>
+<p><strong>参考资料：</strong></p>
+<ol>
+<li>天地会论坛 rainssong《[心得] PureMVC闲谈》（一）（二）（三）（四）（五）<a href="http://bbs.9ria.com/thread-128680-1-2.html" target="_blank"><a href="http://bbs.9ria.com/thread-128680-1-2.html">http://bbs.9ria.com/thread-128680-1-2.html</a></a></li>
+<li><a href="http://baike.baidu.com/view/2044900.htm" target="_blank">百度百科</a></li>
+<li>AS3 mvc应用<a href="http://neveras.blog.51cto.com/1122618/255181" target="_blank"><a href="http://neveras.blog.51cto.com/1122618/255181">http://neveras.blog.51cto.com/1122618/255181</a></a></li>
+<li>官方帮助文档：<a href="http://puremvc.org/" target="_blank"><a href="http://puremvc.org/">http://puremvc.org/</a></a></li>
+<li>pureMVC四步走：<a href="http://bbs.9ria.com/viewthread.php?tid=58666" target="_blank"><a href="http://bbs.9ria.com/viewthread.php?tid=58666">http://bbs.9ria.com/viewthread.php?tid=58666</a></a></li>
+<li>pureMVC之helloworld：<a href="http://www.cnblogs.com/yjmyzz/archive/2010/07/27/1786123.html" target="_blank"><a href="http://www.cnblogs.com/yjmyzz/archive/2010/07/27/1786123.html">http://www.cnblogs.com/yjmyzz/archive/2010/07/27/1786123.html</a></a></li>
+</ol>
+<p>&nbsp;</p>
+<blockquote>
+<p>*耦合度：</p>
+<p>软件设计中通常用耦合度和内聚度作为衡量模块独立程度的标准。划分摸块的一个准则就是高内聚低耦合。
+耦合度是指模块之间联系的紧密程度。
+模块间的耦合度是指模块之间的依赖关系，包括控制关系、调用关系、数据传递关系。模块间联系越多，其耦合性越强，同时表明其独立性越差。降低模块间的耦合度能减少模块间的影响，防止对某一模块修改所引起的“牵一发动全身”的水波效应，保证系统设计顺利进行。</p>
+</blockquote>
 
         
       </div>
@@ -546,7 +727,34 @@ public class Startup extends Sprite
           <p>社团忙得很久没去碰flash开发了，满脑子的想法而没时间去实行，这不能不说也是一种失败。</p>
 <p>今天看到一篇文章：“抛弃掉pruemvc吧，flash不适合使用这么死板的东西”，就发现我还不清楚mvc，mvc看过但不知道是什么。于是我就突然有这个一点一滴巩固flash基础的想法。</p>
 <p>从现在起20天系统地巩固一下flash的吧，发现一直是系统基础方面比较薄弱，知识了解总是零零散散的，概念也是模模糊糊的，这又谈何开发。正如设计师一样， 不懂得系统的设计规则，又如何去打破它来创新。</p>
-<p>&nbsp;
+<p>&nbsp;</p>
+<p><em><span style="color: #000000;">（以下资料打多来自于百度百科，部分来源于论坛）</span></em></p>
+<p><strong>mvc为何？</strong></p>
+<p>MVC (Model View Controller)。M是指数据模型，V是指用户界面，C则是控制器。模型－视图－控制器（MVC）模式是一个有用的工具箱，它有很多好处，但也有一些缺点。</p>
+<p><strong>mvc如何工作？</strong></p>
+<p>MVC是一个设计模式，它强制性的使应用程序的<strong>输入、处理和输出</strong>分开。使用MVC应用程序被分成三个核心部件：<strong>模型、视图、控制器</strong>。它们各自处理自己的任务。</p>
+<p><strong>视图(View)：</strong></p>
+<p>代表用户交互界面，MVC设计模式对于视图的处理是限于视图上数据的采集和处理，以及用户的请求，而不包括在视图上的业务流程的处理。</p>
+<p><strong>模型(Model)：</strong></p>
+<p><strong>1、</strong>企业数据和业务规则。在MVC的三个部件中，模型拥有最多的处理任务。被模型返回的数据是中立的，就是说模型与数据格式无关，这样一个模型能为多个视图提供数据。由于应用于模型的代码只需写一次就可以被多个视图重用，所以减少了代码的重复性。</p>
+<p><strong>2、</strong>业务流程/状态的处理以及业务规则的制定。业务流程的处理过程对其它层来说是黑箱操作，模型接受视图请求的数据，并返回最终的处理结果。业务模型的设计可以说是MVC的核心。</p>
+<p><strong>控制(Controller)：</strong></p>
+<p>可以理解为从用户接收请求, 将模型与视图匹配在一起，共同完成用户的请求，但是它却不做任何的数据处理。</p>
+<p><strong>MVC的优势</strong></p>
+<p>开发人员可以只关注整个结构中的其中某一层，可以很容易的用新的实现来替换原有层次的实现，可以降低层与层之间的依赖，有利于标准化，利于各层逻辑的复用。</p>
+<p>&nbsp;</p>
+<p><strong>btw，关于框架、模式的区别</strong></p>
+<blockquote>
+<p>有很多程序员往往把框架模式和设计模式混淆，认为MVC是一种设计模式。实际上它们完全是不同的概念。</p>
+<p><strong>重用？</strong></p>
+<p>构件通常是代码重用，而设计模式是设计重用，框架则介于两者之间，部分代码重用，部分设计重用，有时分析也可重用。在软件生产中有三种级别的重用：内部重用，即在同一应用中能公共使用的抽象块;代码重用，即将通用模块组合成库或工具集，以便在多个应用和领域都能使用；应用框架的重用，即为专用领域提供通用的或现成的基础结构，以获得最高级别的重用性。</p>
+<p><strong>框架与设计模式？</strong></p>
+<p>框架与设计模式虽然相似，但却有着根本的不同。设计模式是对在某种环境中反复出现的问题以及解决该问题的方案的描述，它比框架更抽象；框架可以用代码表示，也能直接执行或复用，而对模式而言只有实例才能用代码表示;设计模式是比框架更小的元素，一个框架中往往含有一个或多个设计模式，框架总是针对某一特定应用领域，但同一模式却可适用于各种应用。可以说，框架是软件，而设计模式是软件的知识。</p>
+<p><div>         框架模式有哪些？MVC、MTV、MVP等等；</div>
+框架有哪些？C++语言的QT、MFC、gtk，Java语言的SSH，php语言的 smarty(MVC模式)，python语言的django(MTV模式)等等</p>
+<p>设计模式有哪些？工厂模式、适配器模式、策略模式等等</p>
+<p><strong>简而言之：</strong>框架模式是大智慧，用来对软件设计进行分工；设计模式是小技巧，对具体问题提出解决方案，使得代码复用率和耦合度降低。</p>
+</blockquote>
 
         
       </div>
