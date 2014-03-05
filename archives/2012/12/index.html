@@ -9,7 +9,8 @@
   
     <link rel="icon" href="/favicon.png">
   
-  <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css" type="text/css">-->
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/pure-min.css" type="text/css">
   <link rel="stylesheet" href="/css/biture.css" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -21,6 +22,7 @@
     <div class="wrap">
   <div class="inner">
     <a class="brand" href="/">伴星的家</a>
+    <a id="menu-toggle" href="#"><i class="fa fa-bars"></i></a>
 <ul class="nav-menu">
 
 
@@ -49,8 +51,7 @@
 
 </ul>
 
-<div style="display: inline-block; float:right; padding: 3px 0 0 0">
-<ul class="nav-menu">
+<ul class="nav-menu ext-menu">
 
 
     <li><a href="//github.com/shengbanx">Github</a></li>
@@ -71,7 +72,7 @@
   </div>
 </div>
 
-<div class="tagcloud" id="fbox-tagcloud" style="margin:10px; display:none; overflow: hidden"><a href="/tags/APE/" style="font-size: 12.00px;">APE</a><a href="/tags/AS3/" style="font-size: 21.00px;">AS3</a><a href="/tags/ActionScript3/" style="font-size: 18.00px;">ActionScript3</a><a href="/tags/Event/" style="font-size: 12.00px;">Event</a><a href="/tags/Flash/" style="font-size: 21.00px;">Flash</a><a href="/tags/Flasher/" style="font-size: 12.00px;">Flasher</a><a href="/tags/Flex/" style="font-size: 12.00px;">Flex</a><a href="/tags/GIMS/" style="font-size: 12.00px;">GIMS</a><a href="/tags/Haxe/" style="font-size: 12.00px;">Haxe</a><a href="/tags/MVC/" style="font-size: 15.00px;">MVC</a><a href="/tags/Morn UI/" style="font-size: 12.00px;">Morn UI</a><a href="/tags/PureMVC/" style="font-size: 12.00px;">PureMVC</a><a href="/tags/Starling/" style="font-size: 15.00px;">Starling</a><a href="/tags/air/" style="font-size: 18.00px;">air</a><a href="/tags/as3参考文档/" style="font-size: 12.00px;">as3参考文档</a><a href="/tags/blog/" style="font-size: 12.00px;">blog</a><a href="/tags/design/" style="font-size: 12.00px;">design</a><a href="/tags/hexo/" style="font-size: 12.00px;">hexo</a><a href="/tags/一串小球/" style="font-size: 12.00px;">一串小球</a><a href="/tags/创作/" style="font-size: 18.00px;">创作</a><a href="/tags/发展方向/" style="font-size: 12.00px;">发展方向</a><a href="/tags/基础/" style="font-size: 18.00px;">基础</a><a href="/tags/学习/" style="font-size: 18.00px;">学习</a><a href="/tags/寒假/" style="font-size: 12.00px;">寒假</a><a href="/tags/寒假实践/" style="font-size: 12.00px;">寒假实践</a><a href="/tags/小玩意/" style="font-size: 12.00px;">小玩意</a><a href="/tags/工作室/" style="font-size: 12.00px;">工作室</a><a href="/tags/应用领域/" style="font-size: 12.00px;">应用领域</a><a href="/tags/开发/" style="font-size: 12.00px;">开发</a><a href="/tags/弹球/" style="font-size: 15.00px;">弹球</a><a href="/tags/总结/" style="font-size: 12.00px;">总结</a><a href="/tags/打字/" style="font-size: 12.00px;">打字</a><a href="/tags/无聊加条线/" style="font-size: 12.00px;">无聊加条线</a><a href="/tags/无聊小球/" style="font-size: 15.00px;">无聊小球</a><a href="/tags/日志/" style="font-size: 24.00px;">日志</a><a href="/tags/游戏/" style="font-size: 12.00px;">游戏</a><a href="/tags/物理引擎/" style="font-size: 12.00px;">物理引擎</a><a href="/tags/类文档/" style="font-size: 12.00px;">类文档</a><a href="/tags/谈Flash/" style="font-size: 12.00px;">谈Flash</a></div>
+<div class="tagcloud" id="fbox-tagcloud" style="margin:10px; display:none; overflow: hidden"><a href="/tags/APE/" style="font-size: 12.00px;">APE</a><a href="/tags/AS3/" style="font-size: 21.00px;">AS3</a><a href="/tags/ActionScript3/" style="font-size: 18.00px;">ActionScript3</a><a href="/tags/Event/" style="font-size: 12.00px;">Event</a><a href="/tags/Flash/" style="font-size: 21.00px;">Flash</a><a href="/tags/Flasher/" style="font-size: 12.00px;">Flasher</a><a href="/tags/Flex/" style="font-size: 12.00px;">Flex</a><a href="/tags/GIMS/" style="font-size: 12.00px;">GIMS</a><a href="/tags/Haxe/" style="font-size: 12.00px;">Haxe</a><a href="/tags/MVC/" style="font-size: 15.00px;">MVC</a><a href="/tags/Morn UI/" style="font-size: 12.00px;">Morn UI</a><a href="/tags/PureMVC/" style="font-size: 12.00px;">PureMVC</a><a href="/tags/Starling/" style="font-size: 15.00px;">Starling</a><a href="/tags/air/" style="font-size: 18.00px;">air</a><a href="/tags/as3参考文档/" style="font-size: 12.00px;">as3参考文档</a><a href="/tags/blog/" style="font-size: 12.00px;">blog</a><a href="/tags/design/" style="font-size: 15.00px;">design</a><a href="/tags/hexo/" style="font-size: 12.00px;">hexo</a><a href="/tags/一串小球/" style="font-size: 12.00px;">一串小球</a><a href="/tags/创作/" style="font-size: 18.00px;">创作</a><a href="/tags/发展方向/" style="font-size: 12.00px;">发展方向</a><a href="/tags/基础/" style="font-size: 18.00px;">基础</a><a href="/tags/学习/" style="font-size: 18.00px;">学习</a><a href="/tags/寒假/" style="font-size: 12.00px;">寒假</a><a href="/tags/寒假实践/" style="font-size: 12.00px;">寒假实践</a><a href="/tags/小玩意/" style="font-size: 12.00px;">小玩意</a><a href="/tags/工作室/" style="font-size: 12.00px;">工作室</a><a href="/tags/应用领域/" style="font-size: 12.00px;">应用领域</a><a href="/tags/开发/" style="font-size: 12.00px;">开发</a><a href="/tags/弹球/" style="font-size: 15.00px;">弹球</a><a href="/tags/总结/" style="font-size: 12.00px;">总结</a><a href="/tags/打字/" style="font-size: 12.00px;">打字</a><a href="/tags/无聊加条线/" style="font-size: 12.00px;">无聊加条线</a><a href="/tags/无聊小球/" style="font-size: 15.00px;">无聊小球</a><a href="/tags/日志/" style="font-size: 24.00px;">日志</a><a href="/tags/游戏/" style="font-size: 12.00px;">游戏</a><a href="/tags/物理引擎/" style="font-size: 12.00px;">物理引擎</a><a href="/tags/类文档/" style="font-size: 12.00px;">类文档</a><a href="/tags/谈Flash/" style="font-size: 12.00px;">谈Flash</a></div>
 
   </header>
   <div id="main-content" class="wrap">
@@ -185,6 +186,33 @@
   })();
 </script>
 
+
+<!-- Responsive menu -->
+<script>
+$(document).ready(function() {
+  $("#menu-toggle").click(function(event) {
+    event.preventDefault();
+    if ($(this).hasClass("isShow")) {
+      $("#header").css({position: "fixed"});
+      $("ul.nav-menu").hide();
+      $(this).removeClass("isShow");
+    } else {
+      $("#header").css({position: "static"});
+      $("ul.nav-menu").show();
+      $("html, body").scrollTop(0);
+      $(this).addClass("isShow");
+    }
+    return false;
+  });
+
+  $(window).resize(function() {
+    if ($(window).width() > 700) {
+      $("ul.nav-menu").removeAttr('style');
+    }
+  });
+
+});
+</script>
 
 
 
