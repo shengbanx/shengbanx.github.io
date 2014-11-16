@@ -256,7 +256,7 @@
 				<h3 id="downsampling">iPhone 6 Plus上的降采样</h3>
 				<p>在所有iOS设备上，渲染的像素和实际像素是相等的。唯一的例外是：iPhone 6 Plus的Retina HD屏幕。因为其屏幕的像素分辨率比自然的 @3x 分辨率更低，渲染的内容会自动调整到大约原尺寸的87%（从2208 x 1242像素适应到1920 x 1080像素)。</p>
 				<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/iphone-pixels-and-points.jpg" class="small-margin" alt=" iPhone 5S, 6 and 6 Plus显示的区别">
-				<span class="caption"> iPhone 5S、6 和 6 Plus显示的区别。更多信息请点击 <a href="http://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions" target="_blank">这里</a>.</span>
+				<span class="caption"> iPhone 5S、6 和 6 Plus显示的区别。更多信息请点击 <a href="http://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions" target="_blank">这里</a>。</span>
 				<h2 id="app-icons">App 图标</h2>
 				<div class="table-holder">
 					<table class="iosgd-data">
@@ -362,7 +362,7 @@
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-nav-bar-landscape-hover.png" class="spec">
 				</div>
 				<span class="caption">iPhone 4S横屏时的导航栏。栏高度减少到12pt，在iPad上也是这样。在横屏时隐藏状态栏是习惯做法。</span>
-				<p>导航栏元素总是按照特定的对齐模式。</p>
+				<p>导航栏元素总是按照特定的对齐方式。</p>
 				<ul>
 					<li>返回按钮总是在左端左对齐。</li>
 					<li>当前视图的标题则在Bar上居中。</li>
@@ -442,13 +442,13 @@
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-activity-sheet.jpg" alt="iOS activity sheet view">
 				</div>
 				<h4>动作（Actions）</h4>
-				<p>动作表（Action Sheets ），用于从可执行的动作中选择执行一个动作，要求App用户选择一个动作继续，或者取消。</p>
+				<p>动作菜单（Action Sheets ），用于从可执行的动作中选择执行一个动作，要求App用户选择一个动作继续，或者取消。</p>
 				<div class="ui-holder">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-action-sheet.jpg" alt="iOS action sheet view">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-action-sheet-hover.png" class="spec">
 				</div>
-				<p>在竖屏时（以及在一些小屏幕横屏上也是），动作总是以一列按钮滑动显示在屏幕底部。在这种情况下，一个动作表应该有一个取消按钮来关闭此视图，而不是只能执行前面的动作。</p>
-				<p>当有足够空间时（例如在iPad屏幕上），动作视图则换成一个<a href="http://iosdesign.ivomynttinen.com/#popovers">浮动框（Popovers）</a>。这时并不要求要有一个关闭按钮，因为点击任意外面的空白地方j就可以关闭。</p>
+				<p>在竖屏时（以及在一些小屏幕横屏上也是），动作菜单总是以一列按钮滑动显示在屏幕底部。在这种情况下，一个动作菜单应该有一个取消按钮来关闭此视图，而不是只能执行前面的动作。</p>
+				<p>当有足够空间时（例如在iPad屏幕上），动作菜单视图则换成一个<a href="http://iosdesign.ivomynttinen.com/#popovers">浮动框（Popovers）</a>。这时并不要求要有一个关闭按钮，因为点击任意外面的空白地方j就可以关闭。</p>
 				
 				<h4>警告提醒（Alerts）</h4>
 				<p>警告提醒用于通知用户关键信息，以及可以强制用户做出一些动作选择。</p>
@@ -463,7 +463,7 @@
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-edit-menu.jpg" alt="最小化状态的搜索栏">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-edit-menu-hover.png" class="spec">
 				</div>
-				<p>在一个元素被选定时(文本，图片及其他)，编辑菜单允许用户执行复制、粘贴、剪切等操作。虽然可以控制哪些选项是可以自定义的，但菜单的外观你是无法该设置的，除非你构建一个自己的自定义编辑菜单。</p>
+				<p>在一个元素被选定时(文本，图片及其他)，编辑菜单允许用户执行复制、粘贴、剪切等操作。虽然可以控制哪些选项是可以自定义的，但菜单的外观你是无法设置的，除非你构建一个自己的自定义编辑菜单。</p>
 				<h4 id="popovers">浮动框（Popover）</h4>
 				<p>当一个特别动作要求用户在程序进行的同时输入多个信息时，浮动框（Popover）是绝佳选择。一个很好地例子就是，选择添加一个项目时，有好几项属性需要在项目被添加前设置好，这种情况喜爱可以在浮动框上完成。</p>
 				<p>在一般情况下，浮动框上方会有一个相关的控件（如一个按钮），当打开的时候浮动框的箭头指向控件。浮动框背景也是轻微减少不透明度的毛玻璃模糊效果，就像iOS7以来的其他大多数UI元素一样。</p>
@@ -483,12 +483,12 @@
 				</ul>
 				<p>这是三种可用的模态视图风格：</p>
 				<ol>
-					<li>全屏风格（Full screen）：覆盖整个屏幕。</li>
-					<li>页表风格（Page sheet）：在竖屏时，模态视图只覆盖部分下面的内容，当前视图留下一部分可视区域，并覆盖一层半透明黑色背景。在横屏时，页表风格也是和全屏风格一样。</li>
-					<li>表单风格（Form sheet）：在竖屏时，模态视图在屏幕中间，周围区域可见但覆盖一层半透明黑色背景。当键盘显示时，模态视图的位置会自适应地改变。在横屏时，页表风格也是和全屏风格一样。</li>
+					<li>全屏（Full screen）：覆盖整个屏幕。</li>
+					<li>页表（Page sheet）：在竖屏时，模态视图只覆盖部分下面的内容，当前视图留下一部分可视区域，并覆盖一层半透明黑色背景。在横屏时，页表模态视图也是和全屏模态视图一样。</li>
+					<li>表单（Form sheet）：在竖屏时，模态视图在屏幕中间，周围区域可见但覆盖一层半透明黑色背景。当键盘显示时，模态视图的位置会自适应地改变。在横屏时，表单模态视图也是和全屏模态视图一样。</li>
 				</ol>
 				<h3 id="controls">控件（Controls）</h3>
-				<p>iOS为所有你能想到的基本输入类型提供了范围很广的控件。以上列表你会发现十分重要（因为经常会用到），另外完整的可用控件的列表，你得去<a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/UIKitUICatalog/UIControl.html#//apple_ref/doc/uid/TP40012857-UIControl-SW1" target="_blank">iOS开发者资料库</a>里查看.</p>
+				<p>iOS为所有你能想到的基本输入类型提供了范围很广的控件。以上列表你会发现十分重要（因为经常会用到），另外完整的可用控件的列表，你得去<a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/UIKitUICatalog/UIControl.html#//apple_ref/doc/uid/TP40012857-UIControl-SW1" target="_blank">iOS开发者资料库</a>里查看。</p>
 				<h4>按钮（Buttons）</h4>
 				<p>或许所有中最常用的控件就是这经典好用的按钮了。从iOS7开始，默认按钮设计就不再看起来像个按钮了，而更像是一个纯文本链接。不过按钮控件还是具有高度的自定义性，允许你自定义文本风格、投影以及颜色，甚至是一个按钮都是可以定制的，假如没有文本标签的话，全自定义背景都行。</p>
 				<p>记住，一个按钮可以有多个状态，每个状态需传达相关视觉语言：默认（Default），高亮（Highlighted），选定（Selected），不可用（Disabled.）。</p>
@@ -506,14 +506,14 @@
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-segment-control-hover.png" class="spec">
 				</div>
 				<span class="caption">没有Icon和有Icon的分段控件</span>
-				<p>每个分段可以包含一个文本或一个图标，但不能同时有文本和图标。另外，也不推荐在一个分段控件里混用分段类型（文本和图标混合出现）。一个分段的宽度会基于分段的数量自动改变（即两个分段：各占总控件宽度50%，5个分段则各占20%）</p>
+				<p>每个分段可以包含一个文本或一个图标，但不能同时有文本和图标。另外，也不推荐在一个分段控件里混用分段类型（文本和图标混合出现）。一个分段的宽度会基于分段的数量自动改变（即两个分段：各占总控件宽度50%，5个分段则各占20%）。</p>
 				<h4>滑块（Sliders）</h4>
 				<p>滑块控件可以让用户从一个允许范围里滑动选择一个特定的值。因为十分流畅也无需其余步骤就可以选择一个值，所以推荐滑块用于选择一个估计值，而不是一个需要精确的数值。例如，滑块控件可以很好地设置音量，因为用户可以从音量上听出区别，同时可以看到滑块上响和不响的区别，但如果是输入一个数值来设置分贝值就十分不现实了。</p>
 				<div class="ui-holder">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-slider.jpg" alt="iOS slider controls">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-slider-hover.png" class="spec">
 				</div>
-				<span class="caption">有Icon和没Icon的滑块控件。</span>
+				<span class="caption">无Icon和有Icon的滑块控件。</span>
 				<p>可以设置最小值和最大值的Icon，在显示控件始端和末端显示，让用户直观地知道滑块的用途。</p>
 				<h4>步进器（Stepper）</h4>
 				<p>步进器应用在用户需要在一个允许范围里输入一个精确值的情况（例如，1至10）。一个步进器需要包含两个分段按钮，一个用于减少当前值，一个用于增加。</p>
