@@ -1,0 +1,747 @@
+<!DOCTYPE html><!-- saved from url=(0034)http://iosdesign.ivomynttinen.com/ -->
+
+<html class="no-js hb-loaded" slick-uniqueid="3"><!--<![endif]--><head><meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="http://ivomynttinen.com/theme/css/main.css">
+		<link rel="stylesheet" href="http://ivomynttinen.com/theme/css/blog.css"><link rel="stylesheet" href="http://iosdesign.ivomynttinen.com/css/custom.css">
+
+		<link rel="stylesheet" href="./ios-guideline-assets/cn.css">				
+		<title>iOS设计指南 - Ivo Mynttinen / UI设计师</title>
+		<meta name="description" content="设计iOS应用时大家可能会觉得有点困难，但只要掌握苹果各种设备最新的、准确的信息，往往问题就迎刃而解了。">
+		
+		<link rel="shortcut icon" href="http://ivomynttinen.com/theme/favicon/favicon.ico">
+		<link rel="apple-touch-icon" sizes="57x57" href="http://ivomynttinen.com/theme/favicon/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="http://ivomynttinen.com/theme/favicon/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="http://ivomynttinen.com/theme/favicon/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="http://ivomynttinen.com/theme/favicon/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="http://ivomynttinen.com/theme/favicon/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="http://ivomynttinen.com/theme/favicon/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="http://ivomynttinen.com/theme/favicon/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="http://ivomynttinen.com/theme/favicon/apple-touch-icon-152x152.png">
+		<link rel="icon" type="image/png" href="http://ivomynttinen.com/theme/favicon/favicon-196x196.png" sizes="196x196">
+		<link rel="icon" type="image/png" href="http://ivomynttinen.com/theme/favicon/favicon-160x160.png" sizes="160x160">
+		<link rel="icon" type="image/png" href="http://ivomynttinen.com/theme/favicon/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="http://ivomynttinen.com/theme/favicon/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="http://ivomynttinen.com/theme/favicon/favicon-32x32.png" sizes="32x32">
+		<meta name="msapplication-TileColor" content="#2d89ef">
+		<meta name="msapplication-TileImage" content="http://ivomynttinen.com/theme/favicon/mstile-144x144.png">
+		<meta name="msapplication-config" content="http://ivomynttinen.com/theme/favicon/browserconfig.xml">
+		
+		<meta itemprop="name" content="iOS设计指南 - Ivo Mynttinen / UI设计师">
+		<meta itemprop="description" content="设计iOS应用时大家可能会觉得有点困难，但只要掌握苹果各种设备最新的、准确的信息，往往问题就迎刃而解了。">
+		<meta itemprop="image" content="http://iosdesign.ivomynttinen.com/content/opengraph.jpg">
+		<meta property="og:title" content="iOS设计指南 - Ivo Mynttinen / UI设计师">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://iosdesign.ivomynttinen.com/">
+		<meta property="og:image" content="http://iosdesign.ivomynttinen.com/content/opengraph.jpg">
+		<meta property="og:site_name" content="Ivo Mynttinen -  UI设计师">
+		<meta property="og:description" content="设计iOS应用时大家可能会觉得有点困难，但只要掌握苹果各种设备最新的、准确的信息，往往问题就迎刃而解了。">
+		<meta property="fb:admins" content="1401725700">
+		<meta property="fb:app_id" content="290368064314511">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:url" content="http://iosdesign.ivomynttinen.com/">
+		<meta name="twitter:title" content="iOS设计指南 - Ivo Mynttinen / UI设计师">
+		<meta name="twitter:description" content="设计iOS应用时大家可能会觉得有点困难，但只要掌握苹果各种设备最新的、准确的信息，往往问题就迎刃而解了。">
+		<meta name="twitter:image" content="http://iosdesign.ivomynttinen.com/content/opengraph.jpg">
+		<meta name="twitter:site" content="@ivomynttinen">
+		<meta name="twitter:creator" content="@ivomynttinen">
+		
+		<script async="" src="http://dns.test.b0.upaiyun.com:1827/?s=1&k=0&t=1416076889164.7075"></script>
+	<script type="text/javascript" async="" src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/embed.js"></script></head>
+
+<body class="sticky-head down" huaban_collector_injected="true" ryt13950="1">
+
+	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="about:blank" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="about:blank" style="border: none;"></iframe></div></div></div>
+
+	<header class="clone">
+			<div class="wrap">
+	<nav>
+		<a href="http://ivomynttinen.com/" class="logo">
+			<span class="left-wing animate"></span>
+			<span class="right-wing animate"></span>
+		</a>
+		<ul>
+			<li>
+				<a href="http://ivomynttinen.com/" title="View profile" class="">Profile</a>
+			</li>
+			<li>
+				<a href="http://ivomynttinen.com/work/" title="View work" class="">Work</a>
+			</li>
+			<li>
+				<a href="http://ivomynttinen.com/blog/" title="Read my blog" class="active">Blog</a>
+			</li>
+			<li>
+				<a href="http://ivomynttinen.com/contact/" title="Contact me" class="">Contact</a>
+			</li>
+		</ul>
+	<a class="social twitter" href="https://twitter.com/ivomynttinen" target="_blank"></a><a class="social facebook" href="https://www.facebook.com/ivomynttinendesign" target="_blank"></a></nav>
+</div>
+	</header><header>
+			<div class="wrap">
+	<nav>
+		<a href="http://ivomynttinen.com/" class="logo">
+			<span class="left-wing animate"></span>
+			<span class="right-wing animate"></span>
+		</a>
+		<ul>
+			<li>
+				<a href="http://ivomynttinen.com/" title="View profile" class="">Profile</a>
+			</li>
+			<li>
+				<a href="http://ivomynttinen.com/work/" title="View work" class="">Work</a>
+			</li>
+			<li>
+				<a href="http://ivomynttinen.com/blog/" title="Read my blog" class="active">Blog</a>
+			</li>
+			<li>
+				<a href="http://ivomynttinen.com/contact/" title="Contact me" class="">Contact</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+	</header>
+	<div class="header blog-single light ios-gd">
+		<div class="wrap ios-gd-intro">
+			<h1>iOS设计指南</h1>
+			<span class="subline">为苹果iOS设备设计美的应用。</span>
+			<p class="excerpt">设计iOS应用时大家可能会觉得有点困难，但只要掌握苹果各种设备最新的、准确的信息，往往问题就迎刃而解了。这个设计指南将快速帮助设计师们为iOS设计出优雅的应用。</p>
+		</div>
+	</div>
+		<div class="wrap post">
+			<article class="blog-post">
+				<h2 class="upper-head">关于此设计指南</h2>
+				<p>此设计指南描述的是如何按照苹果官方的人机界面指南（HIG）为iOS设计应用，而不是如何设计自定义控件。这可以帮助大家打破规则。此文档只作指导作用，并非解决复杂的、特定的设计问题。</p>
+				<p class="semi">非官方文档，将定期更新和补充。最后更新于：2014年11月11日。</br>本文档由<a href="http://manifold.shengbanx.com"> shengbanx </a>翻译，原文版权归<a href="http://iosdesign.ivomynttinen.com/"> Ivo Mynttinen</a> 所有。</p>
+				<h2 id="resolutions-displays">分辨率和显示规格</h2>
+				<div class="table-holder">
+					<table class="iosgd-data">
+						<thead>
+							<tr>
+								<th>设备</th>
+								<th>Retina</th>
+								<th>竖屏(px)</th>
+								<th>横屏(px)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>iPhone 6 Plus</td>
+								<td><span class="retina plus">Retina HD</span></td>
+								<td>1080 x 1920</td>
+								<td>1920 x1080</td>
+							</tr>
+							<tr>
+								<td>iPhone 6</td>
+								<td><span class="retina yes">Retina</span></td>
+								<td>750 x 1334</td>
+								<td>1334 x 750</td>
+							</tr>
+							<tr>
+								<td>iPhone 5<span class="sub-device">5, 5S, 5C</span></td>
+								<td><span class="retina yes">Retina</span></td>
+								<td>640 x 1136</td>
+								<td>1136 x 640</td>
+							</tr>
+							<tr>
+								<td>iPhone 4<span class="sub-device">4, 4S</span></td>
+								<td><span class="retina yes">Retina</span></td>
+								<td>640 x 960</td>
+								<td>960 x 640</td>
+							</tr>
+							<tr>
+								<td>iPhone<span class="sub-device">1、2、3</span></td>
+								<td><span class="retina no">No</span></td>
+								<td>320 x 480</td>
+								<td>480 x 320</td>
+							</tr>
+							<tr>
+								<td>iPad Air / Retina iPad<span class="sub-device">1&amp;2 / 3&amp;4</span></td>
+								<td><span class="retina yes">No</span></td>
+								<td>1536 x 2048</td>
+								<td>2048 x 1536</td>
+							</tr>
+							<tr>
+								<td>iPad Mini<span class="sub-device">2&amp;3</span></td>
+								<td><span class="retina yes">Retina</span></td>
+								<td>1536 x 2048</td>
+								<td>2048 x 1536</td>
+							</tr>
+							<tr>
+								<td>iPad<span class="sub-device">Mini, 1&amp;2</span></td>
+								<td><span class="retina no">No</span></td>
+								<td>768 x 1024</td>
+								<td>1024 x 768</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<h3 id="points-pixels">点（pt）和像素（px）的区别</h3>
+				<p>像素（pixels，px）是我们可以在数码显示上控制最小的计算单位。在同一个屏幕尺寸，更高的PPI（每英寸的像素数目），就能显示更多的像素，同时渲染的内容也会更清晰。</p>
+				<p>点（points，pt）是一个与分辨率无关的计算单位。根据屏幕的像素密度，一个点可以包含多个像素（例如，在标准Retina显示屏上1 pt里有2 x 2个像素）。</p>
+				<p>当你为多种显示设备设计时，你应该以“点”为单位作参考，但设计还是以像素为单位设计的。这意味着仍然需要以3种不同的分辨率导出你的素材，不管你以哪种分辨率设计你的应用。</p>
+				<div class="tip">
+					<h4>注意</h4>
+					<p>只要没有另外指定（如一个数值加上“px”），此指南提到具体尺寸均以点（pt）为单位。如果你需要转换成相应的像素值，很简单，Retina屏相应乘2或Retina HD屏则乘3。</p>
+				</div>
+				<div class="table-holder">
+					<table class="iosgd-data">
+						<thead>
+							<tr>
+								<th>设备</th>
+								<th>素材分辨率</th>
+								<th>PPI</th>
+								<th>设备尺寸</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>iPhone 6 Plus</td>
+								<td><span class="asset-res x3">@3x</span></td>
+								<td>401</td>
+								<td>5.5″</td>
+							</tr>
+							<tr>
+								<td>iPhone 6</td>
+								<td><span class="asset-res x2">@2x</span></td>
+								<td>326</td>
+								<td>4.7″</td>
+							</tr>
+							<tr>
+								<td>iPhone 5<span class="sub-device">5, 5S, 5C</span></td>
+								<td><span class="asset-res x2">@2x</span></td>
+								<td>326</td>
+								<td>4.0″</td>
+							</tr>
+							<tr>
+								<td>iPhone 4<span class="sub-device">4, 4S</span></td>
+								<td><span class="asset-res x2">@2x</span></td>
+								<td>326</td>
+								<td>3.5″</td>
+							</tr>
+							<tr>
+								<td>iPhone<span class="sub-device">1、2、3</span></td>
+								<td><span class="asset-res x1">@1x</span></td>
+								<td>163</td>
+								<td>3.5″</td>
+							</tr>
+							<tr>
+								<td>iPad Air / Retina iPad<span class="sub-device">1&amp;2 / 3&amp;4</span></td>
+								<td><span class="asset-res x2">@2x</span></td>
+								<td>264</td>
+								<td>9.7″</td>
+							</tr>
+							<tr>
+								<td>iPad Mini<span class="sub-device">2&amp;3</span></td>
+								<td><span class="asset-res x2">@2x</span></td>
+								<td>326</td>
+								<td>7.9″</td>
+							</tr>
+							<tr>
+								<td>iPad Mini<span class="sub-device">1</span></td>
+								<td><span class="asset-res x1">@1x</span></td>
+								<td>163</td>
+								<td>7.9″</td>
+							</tr>
+							<tr>
+								<td>iPad<span class="sub-device">1、2</span></td>
+								<td><span class="asset-res x1">@1x</span></td>
+								<td>132</td>
+								<td>9.7″</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<h3 id="downsampling">iPhone 6 Plus上的降采样</h3>
+				<p>在所有iOS设备上，渲染的像素和实际像素是相等的。唯一的例外是：iPhone 6 Plus的Retina HD屏幕。因为其屏幕的像素分辨率比自然的 @3x 分辨率更低，渲染的内容会自动调整到大约原尺寸的87%（从2208 x 1242像素适应到1920 x 1080像素)。</p>
+				<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/iphone-pixels-and-points.jpg" class="small-margin" alt=" iPhone 5S, 6 and 6 Plus显示的区别">
+				<span class="caption"> iPhone 5S、6 和 6 Plus显示的区别。更多信息请点击 <a href="http://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions" target="_blank">这里</a>.</span>
+				<h2 id="app-icons">App 图标</h2>
+				<div class="table-holder">
+					<table class="iosgd-data">
+						<thead>
+							<tr>
+								<th>设备</th>
+								<th>App Icon</th>
+								<th>AppStore Icon</th>
+								<th>快速索引</th>
+								<th>设置</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>iPhone 6 Plus</td>
+								<td>180x180 px</td>
+								<td>1024x1024 px</td>
+								<td>120x120 px</td>
+								<td>87x87 px</td>
+							</tr>
+							<tr>
+								<td>iPhone <span class="sub-device">6, 5S, 5, 5C, 4S, 4</span></td>
+								<td>120x120 px</td>
+								<td>1024x1024 px</td>
+								<td>80x80 px</td>
+								<td>58x58 px</td>
+							</tr>
+							<tr>
+								<td>Old iPhones <span class="sub-device">1、2、3</span></td>
+								<td>57x57 px</td>
+								<td>1024x1024 px</td>
+								<td>29x29 px</td>
+								<td>29x29 px</td>
+							</tr>
+							<tr>
+								<td>Retina iPads<span class="sub-device">Mini 2 &amp; 3, Air, 3 &amp; 4</span></td>
+								<td>152x152 px</td>
+								<td>1024x1024 px</td>
+								<td>80x80 px</td>
+								<td>58x58 px</td>
+							</tr>
+							<tr>
+								<td>Old iPads<span class="sub-device">1, 2, Mini 1</span></td>
+								<td>76x76 px</td>
+								<td>1024x1024 px</td>
+								<td>40x40 px</td>
+								<td>29x29 px</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<h3 id="app-icon-applied-effects">自带效果</h3>
+				<p>应用图标（App icons）素材通常会以多种尺寸的无添加效果的、正方形的PNG文件添加到应用包中。当在一个设备上渲染时，iOS会自动添加多种效果在App的图标上。</p>
+				<h4>圆角</h4>
+				<p>过去使用简单半径值的圆角已经不再使用了。从iOS 7开始，App的图标已经开始使用一种叫Superellipse（“超椭圆”）的形状。因为苹果公司并未发布一个官方的形状模板，所以你要用这个<a href="http://appicontemplate.com/" target="_blank">非官方模板</a> 来准确地确定图标将会被折叠多少。</p>
+				<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/app-icon-radius.jpg" alt="iOS 8 app icon radius shape">
+				<p>圆角不要包含在最终的导出素材中。但你在设计过程中可能会需要用到圆角，因为添加描边或阴影等效果时，要对齐图标的边角来设计。</p>
+				<div class="tip">
+					<h4>注意</h4>
+					<p>如果以Supererllipse形状来遮罩你的图标素材，希望运用的一些效果可以对齐到边角，那么，确保不要在遮罩区域外使用任何透明的部分。所有应用图标都不支持透明，将会渲染纯黑色。如果你的素材不是100%不透明的，那么用户将会在圆形边缘上看到黑色噪点。所以推荐设计时画布的背景设置成和App图标相同的背景。</p>
+				</div>
+				<h4>描边（在某些情况下）</h4>
+				<p>如果应用图标使用了白色背景，那么为了能够识别出图标的边界，将会带上1像素的灰色描边。这只有在iOS“设置”（如果你的应用在这里列了出来）和AppStore上会这样。</p>
+				<h4>遗留效果（iOS6及以前的版本）</h4>
+				<p>在iOS旧版本上，会自带这些效果：圆角（稍微不同于iOS7+图标使用的形状）、投影（在主屏幕上）和光泽（可以禁用）。</p>
+				<h3 id="app-icon-grid">栅格系统（Grid system）</h3>
+				<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/app-icon-grid.jpg" alt="iOS 8 app icon grid system">
+				<p>苹果开发了一套黄金比例栅格系统，可以在你的图标上很好地确定元素的尺寸和对齐。不过，即使在原生应用的图标上，苹果的设计师们也没有严格按照这个栅格系统来设计。所以，如果你的图标元素不严格完全对齐栅格可以表现得很好，那么打破规则约束，自由发挥吧。</p>
+				<h2 id="typography">字体</h2>
+				<p>所有iOS版本的默认系统字体都是Helvetica Neue。iOS7开始，苹果对此字体作了一些轻微的修改，但在设计过程中使用原来的Helvetica Neue字体完全没问题。除了默认的字体，也有许多代替字体可以使用。你可以在 <a href="http://iosfonts.com/" target="_blank">iOS完整预装字体清单里</a>里查找。</p>
+				<h3 id="custom-fonts">自定义字体</h3>
+				<p>技术上，任何字体（.ttf）都可以在iOS应用上使用，但要注意授权许可。应该安全地使用那些可以完全免费商业用途的字体。不过App商业用途许可的字体非常少，即使有，获得其许可也会比较昂贵。需要的话，<a href="https://www.myfonts.com/licensing/app/" target="_blank">MyFonts</a> 目前提供了大量的字体，可以授权移动应用使用。</p>
+				<h2 id="color-palette">配色</h2>
+				<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-color-theme.jpg" alt="iOS 8 default colors">
+				<p>自从iOS7，苹果开始在系统界面和预装应用上使用明亮的配色。而你可以使用以上默认的iOS配色，也可以使用自己的颜色（如果想脱颖而出的话最好这样做）。</p>
+				<h2 id="iconography">图标运用</h2>
+				<p>iOS应用里，作为动作执行的视觉表现，图标永远是最好的方式，其常用于搭配文本或者完全取代文本（常见的有“新建”、“删除”等）。通常，我们会将图标处理成导航栏、工具栏或标签栏的一部分。</p>
+				<h3 id="bar-button-icons">栏按钮图标（Bar Button Icons）</h3>
+				<p>Bar上的图标应该总有两种不同的状态：以1或1.5pt线宽的轮廓线描绘的默认状态，以实体填充的活动状态。</p>
+				<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-bar-icons.jpg" alt="iOS button bar outline and solid icons">
+				<p>绝对不要在按钮图标上添加任何如投影或阴影这样的效果，因为这在旧iOS版本（iOS7 Redesign之前）上显得十分多余。按钮图标应该在半透明背景上以纯色绘制——图标的形状将用于遮罩，而图标颜色将会以编程方式赋予。</p>
+				<h3 id="activity-view-icons">活动视图图标</h3>
+				<p>活动视图（如众所周知的分享弹出框Share Popover）上的图标通常以轮廓线风格设计，但iOS8开始，苹果又回归到了在纯白背景上使用实体填充图标了。</p>
+				<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-activity-icons.jpg" class="small-margin" alt="iOS activity sheet icons">
+				<h2 id="commonly-used-design-elements">常用设计元素</h2>
+				<p>iOS提供了大量的可以直接使用的视图和控件，帮助开发者快速创建界面。有些元素可以一定程度上地自定义，但有些可能就不行，而且也是不应该自定义的。当设计一个iOS应用时，你要了解这些工具库，学会什么时候合适就要使用他们。然而，有些时候，创建一个自定义控件也许更好，因为你需要一个更个性的外观，或者想要改变一个已存在控件的功能（危险领域）。总之一切皆可能，有时候打破规则更有意义，但一定要三思而后行。</p>
+				<h3 id="status-bar">状态栏（Status Bar）</h3>
+				<p>状态栏包含基本系统信息，例如当前事件、时间、电池状态及其他更多信息。视觉上状态栏是和导航栏相连的，都使用一样的背景填充。为配合App的风格和保证可读性，状态栏内容有两种不同的风格：暗色（黑）和亮色（白）。</p>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-status-bar.jpg" alt="iOS Status Bar">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-status-bar-hover.png" class="spec">
+				</div>
+				<p>可以隐藏状态栏，但还是请三思。举个例子，当应用下载网络内容时，用户可能想知道，是否连上了一个WIFI网络；或者，当应用要请求蓝牙连接到第三方硬件时，是否打开了蓝牙。一个合理的隐藏状态栏的理由是，当你希望从一个单一元素里移除一切干扰时，比如当展示需要全屏的内容时，如图片幻灯。</p>
+				<h3 id="nav-bar">导航栏（Navigation Bar）</h3>
+				<p>导航栏包含了一些控件，用来在应用里不同的视图中导航，以及管理当前视图中的内容。导航栏总在屏幕的顶部，状态栏的正下方。默认的，导航栏背景会进行轻微半透明处理，以及对下面的内容进行毛玻璃办的模糊处理。背景可以填充纯色、渐变颜色，或者是自定义位图。</p>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-nav-bar.jpg" alt="iOS Navigation Bar">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-nav-bar-hover.png" class="spec">
+				</div>
+				<span class="caption">iPhone 6竖屏时的导航栏。</span>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-nav-bar-landscape.jpg" alt="iOS Navigation Bar Landscape">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-nav-bar-landscape-hover.png" class="spec">
+				</div>
+				<span class="caption">iPhone 4S横屏时的导航栏。栏高度减少到12pt，在iPad上也是这样。在横屏时隐藏状态栏是习惯做法。</span>
+				<p>导航栏元素总是按照特定的对齐模式。</p>
+				<ul>
+					<li>返回按钮总是在左端左对齐。</li>
+					<li>当前视图的标题则在Bar上居中。</li>
+					<li>动作按钮则总是右端对齐。而且应该不要超过一个主要动作，以防误点以及连续操作可以更简单些。</li>
+				</ul>
+				<h3 id="toolbar">工具栏（Toolbar）</h3>
+				<p>工具栏包含一些管理、控制当期那视图内容的动作。iPhone上，工具栏将永远在屏幕底部边缘，而在iPad上，其可以在屏幕顶部出现。</p>
+				<p>和导航栏一样，其背景填充也可以自定义，默认是半透明效果以及模糊处理遮住的内容。</p>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-toolbar.jpg" alt="iOS Toolbar">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-toolbar-hover.png" class="spec">
+				</div>
+				<p>工具栏通常用于超过3个主动作的特定视图。否则很难适应而且外观会看起来很混乱。</p>
+				<h3 id="search-bar">搜索栏（Search Bar）</h3>
+				<p>搜索栏有两种默认的风格：弹出（Prominent）和最小化（Minimal）。两种的功能都相同。</p>
+				<ul>
+					<li>只要用户没有输入文本时，搜索框内将显示提示文本（Placeholder Text），并且，可以选择地设置一个书签图标，用来查看最近搜索以及保存的搜索。</li>
+					<li>一旦输入搜索项目，提示文本将消失，而一个清晰的清空按钮将出现在右端。</li>
+				</ul>
+				<p>搜索栏可以设置一段提醒——一个简短的句子介绍搜索功能。例如，“输入一个城市、邮编或机场。”</p>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-search-bar-prominent.jpg" alt="iOS prominent search bar">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-search-bar-prominent-hover.png" class="spec">
+				</div>
+				<span class="caption">弹出状态的搜索栏，无提示和有提示版。</span>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-search-bar-minimal.jpg" alt="最小化状态的搜索栏">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-search-bar-minimal-hover.png" class="spec">
+				</div>
+				<span class="caption">最小化状态的搜索栏。</span>
+				<p>为了查询搜索能更好地控制，可以为搜索栏接上一个范围栏（Scope Bar）。范围栏将使用和搜索栏相同的风格，其在明确定义了搜索结果类别的情况下会很有用。例如，一个音乐应用，搜索结果可以再次通过歌手、专辑或歌曲进行筛选。</p>
+				<h3 id="tab-bar">标签栏（Tab Bar）</h3>
+				<p>标签栏常用于快速切换应用上的独立视图，且一般也只能这样用。通常在屏幕底部。默认情况下使用和导航栏一样的轻微半透明，以及使用和系统一样的模糊处理底部内容。</p>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-tab-bar.jpg" alt="iOS Tab Bar">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-tab-bar-hover.png" class="spec">
+				</div>
+				<p>标签栏仅可以拥有固定的最大标签数。一旦数目超过最大数目，则最后一个选项卡将会以“更多标签”代替，其余标签以列表形式隐藏于此，另外，一搬有选项可以对显示的选项卡重新进行排序。</p>
+				<p>iPhone上最大选项卡数目是5个，而ipad上则可以显示多达7个而无需“更多”标签。</p>
+				<p>通知用户在一个新视图上有新消息，通常会在标签栏按钮上显示一个数字徽标。如果一个视图暂时隐藏，相关的选项卡按钮不会完全隐藏，而是会慢慢淡化以传达一个不可用的状态。 </p>
+				<h3 id="table-view">表格视图（Table View）</h3>
+				<p>表格视图用于呈现大多数列表风格的信息，可以一列或者多列，也可以选择几行来划分信息或分组。</p>
+				<p>根据你选择的数据类型，可能会用到这两种基本的表格视图类型。</p>
+				<h4>纯表格</h4>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-table-plain.jpg" alt="iOS plain table view">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-table-plain-hover.png" class="spec">
+				</div>
+				<p>纯表格由一定的行数组成，在顶部可以拥有一个表头，以及底部可以含有一个表尾。可以在屏幕右端带一个垂直导航，通过表格的形式进行导航，这在呈现大量数据时十分有用。在右端还可以通过一些方式进行排序（例如，按字母自上到下排序）。</p>
+				<h4>分组表格</h4>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-table-grouped.jpg" alt="iOS grouped table view">
+				</div>
+				<p>分组表格视图以分组的方式组织你的"表行"。每个分组可以有一个头（最好用于描述组的内容）以及一个尾（显示帮助信息等）。分组表格至少要由一个分组组成，而且每个分组至少要有一行。</p>
+				<p>对于这两种表格视图类型，都拥有一些风格，能以一定的方式呈现数据，让用户可以简单地检索、浏览甚至修改它。</p>
+				<h4>默认表格</h4>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-table-default.jpg" alt="iOS default table view">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-table-default-hover.png" class="spec">
+				</div>
+				<p>默认的表格行风格是一个图标加一个标题，而图标在左端。</p>
+				<h4>带副标题表格</h4>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-table-subtitle.jpg" alt="iOS subtitle table view">
+				</div>
+				<p>带副标题的表格风格在标题下面允许有一个简短的副标题文本。常用于进一步解释或简短描述。</p>
+				<h4>带数值表格</h4>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-table-value.jpg" alt="iOS subtitle table view">
+				</div>
+				<p>带数值表格风格可以带一个与行标题相关的特别值。和默认风格类似，每行也可以有一个图标和标题，都是左对齐。紧随其后的是右对齐的数值文本，通常颜色会比标题文本的颜色浅些。</p>
+				<h3 id="temporary-views">模态、浮动框、警告提示</h3>
+				<p>iOS提供多种临时视图，可以一定程度上显示、编辑和修改数据，以适应给定的情境。而每个临时视图都是具有特别的用途的，而且每个外观都不一样。所有临时视图都有一个共同点：当显示时，会在当前视图的最顶层（即在其他所有的上面），而且下面的内容会蒙上一层半透明黑色背景。</p>
+				<h4>活动视图（Activity View）</h4>
+				<p>活动视图是用于执行特定任务的视图。这些任务可以是默认系统任务，如通过选项分享内容等，或者可以完全自定义这些动作。当设计自定义任务按钮图标时，你应该按照和栏按钮图标激活状态下同样的规范——实体填充，没有其余的效果，放在一个半透明背景上。</p>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-activity-sheet.jpg" alt="iOS activity sheet view">
+				</div>
+				<h4>动作（Actions）</h4>
+				<p>动作表（Action Sheets ），用于从可执行的动作中选择执行一个动作，要求App用户选择一个动作继续，或者取消。</p>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-action-sheet.jpg" alt="iOS action sheet view">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-action-sheet-hover.png" class="spec">
+				</div>
+				<p>在竖屏时（以及在一些小屏幕横屏上也是），动作总是以一列按钮滑动显示在屏幕底部。在这种情况下，一个动作表应该有一个取消按钮来关闭此视图，而不是只能执行前面的动作。</p>
+				<p>当有足够空间时（例如在iPad屏幕上），动作视图则换成一个<a href="http://iosdesign.ivomynttinen.com/#popovers">浮动框（Popovers）</a>。这时并不要求要有一个关闭按钮，因为点击任意外面的空白地方j就可以关闭。</p>
+				
+				<h4>警告提醒（Alerts）</h4>
+				<p>警告提醒用于通知用户关键信息，以及可以强制用户做出一些动作选择。</p>
+				<p>警告视图总包含一个标题文本，可以少至一行（对于纯信息警告如“OK”），以及不限一个或两个按钮（请求式的决定，如“发送”和“取消”）。</p>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-alerts.jpg" alt="iOS Alerts">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-alerts-hover.png" class="spec">
+				</div>
+				<p>同时，你可以添加一条信息文本，如果需要，可以添加两个输入文本框，其中一个可以是遮盖的文本，用于输入私密信息如密码或PIN码。</p>
+				<h4>编辑菜单</h4>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-edit-menu.jpg" alt="最小化状态的搜索栏">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-edit-menu-hover.png" class="spec">
+				</div>
+				<p>在一个元素被选定时(文本，图片及其他)，编辑菜单允许用户执行复制、粘贴、剪切等操作。虽然可以控制哪些选项是可以自定义的，但菜单的外观你是无法该设置的，除非你构建一个自己的自定义编辑菜单。</p>
+				<h4 id="popovers">浮动框（Popover）</h4>
+				<p>当一个特别动作要求用户在程序进行的同时输入多个信息时，浮动框（Popover）是绝佳选择。一个很好地例子就是，选择添加一个项目时，有好几项属性需要在项目被添加前设置好，这种情况喜爱可以在浮动框上完成。</p>
+				<p>在一般情况下，浮动框上方会有一个相关的控件（如一个按钮），当打开的时候浮动框的箭头指向控件。浮动框背景也是轻微减少不透明度的毛玻璃模糊效果，就像iOS7以来的其他大多数UI元素一样。</p>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-popover.jpg" alt="iOS popover view">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-popover-hover.png" class="spec">
+				</div>
+				<p>浮动框是一个强大的临时视图，其可以包含多种元件，例如可以拥有自己的导航栏，表格视图，地图以及网页视图。当浮动框因为包含大量元素而拥有较大尺寸时，可以在浮动框内滚动，到达视图底部。</p>
+				<h4>模态（Modals）</h4>
+				<p>对于要求用户执行多个指令或输入多个信息的任务来说，模态视图是一个十分有用的视图。模态出现在所有元素的顶层，而且，当打开时，其区块会与下面的其他交互元素产生相互作用。</p>
+				<p>输入模态常拥有：</p>
+				<ul>
+					<li>一个描述任务的标题；</li>
+					<li>一个不保存、不执行其他动作的关闭模态视图按钮；</li>
+					<li>一个保存或提交输入的信息的按钮；以及</li>
+					<li>各种对用户在模态视图上输入的信息起作用的元素。</li>
+				</ul>
+				<p>这是三种可用的模态视图风格：</p>
+				<ol>
+					<li>全屏风格（Full screen）：覆盖整个屏幕。</li>
+					<li>页表风格（Page sheet）：在竖屏时，模态视图只覆盖部分下面的内容，当前视图留下一部分可视区域，并覆盖一层半透明黑色背景。在横屏时，页表风格也是和全屏风格一样。</li>
+					<li>表单风格（Form sheet）：在竖屏时，模态视图在屏幕中间，周围区域可见但覆盖一层半透明黑色背景。当键盘显示时，模态视图的位置会自适应地改变。在横屏时，页表风格也是和全屏风格一样。</li>
+				</ol>
+				<h3 id="controls">控件（Controls）</h3>
+				<p>iOS为所有你能想到的基本输入类型提供了范围很广的控件。以上列表你会发现十分重要（因为经常会用到），另外完整的可用控件的列表，你得去<a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/UIKitUICatalog/UIControl.html#//apple_ref/doc/uid/TP40012857-UIControl-SW1" target="_blank">iOS开发者资料库</a>里查看.</p>
+				<h4>按钮（Buttons）</h4>
+				<p>或许所有中最常用的控件就是这经典好用的按钮了。从iOS7开始，默认按钮设计就不再看起来像个按钮了，而更像是一个纯文本链接。不过按钮控件还是具有高度的自定义性，允许你自定义文本风格、投影以及颜色，甚至是一个按钮都是可以定制的，假如没有文本标签的话，全自定义背景都行。</p>
+				<p>记住，一个按钮可以有多个状态，每个状态需传达相关视觉语言：默认（Default），高亮（Highlighted），选定（Selected），不可用（Disabled.）。</p>
+				<h4>选择器（Pickers）</h4>
+				<p>选择器用于从可用值列表中选定一个值。其等于网站上常用的下拉选框（选择器也用于触摸模式下的Safari浏览器）。选择器的拓展版本是“数据拾取器”（Datepicker），可以让用户滚动一个日期时间列表来选择日、月份和时间。</p>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-picker.jpg" alt="iOS picker controls">
+				</div>
+				<span class="caption">左边：表格视图里的数据拾取器，右边：代替键盘的选择器。</span>
+				<p>除了背景颜色外，选择器控件的视觉风格、尺寸都不能调整。通常，选择器在屏幕的底部。当键盘同时出现时，其可能出现在其他位置。</p>
+				<h4>分段控件（Segment Controls）</h4>
+				<p>分段控件包含一系列分段（至少两个），可以用于筛选内容或为整理的分类内容创建标签。</p>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-segment-control.jpg" alt="iOS segment controls">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-segment-control-hover.png" class="spec">
+				</div>
+				<span class="caption">没有Icon和有Icon的分段控件</span>
+				<p>每个分段可以包含一个文本或一个图标，但不能同时有文本和图标。另外，也不推荐在一个分段控件里混用分段类型（文本和图标混合出现）。一个分段的宽度会基于分段的数量自动改变（即两个分段：各占总控件宽度50%，5个分段则各占20%）</p>
+				<h4>滑块（Sliders）</h4>
+				<p>滑块控件可以让用户从一个允许范围里滑动选择一个特定的值。因为十分流畅也无需其余步骤就可以选择一个值，所以推荐滑块用于选择一个估计值，而不是一个需要精确的数值。例如，滑块控件可以很好地设置音量，因为用户可以从音量上听出区别，同时可以看到滑块上响和不响的区别，但如果是输入一个数值来设置分贝值就十分不现实了。</p>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-slider.jpg" alt="iOS slider controls">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-slider-hover.png" class="spec">
+				</div>
+				<span class="caption">有Icon和没Icon的滑块控件。</span>
+				<p>可以设置最小值和最大值的Icon，在显示控件始端和末端显示，让用户直观地知道滑块的用途。</p>
+				<h4>步进器（Stepper）</h4>
+				<p>步进器应用在用户需要在一个允许范围里输入一个精确值的情况（例如，1至10）。一个步进器需要包含两个分段按钮，一个用于减少当前值，一个用于增加。</p>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-stepper.jpg" alt="iOS stepper controls">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-stepper-hover.png" class="spec">
+				</div>
+				<p>视觉上，步进器可以高度自定义。</p>
+				<ul>
+					<li>你可以为每个步进按钮设置自定义的Icon；</li>
+					<li>在保留原生iOS外观的时，你可以自定义其边界的颜色，背景以及浅色（Tint Color）的Icon，其会自动设置到每个元素里。</li>
+					<li>如果需要进一步自定义，分段按钮以及分隔符完全可以使用自定义的背景图，</li>
+				</ul>
+				<h4>开关（Switch）</h4>
+				<div class="ui-holder">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-switch.jpg" alt="iOS switch controls">
+					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-switch-hover.png" class="spec">
+				</div>
+				<p>开关允许用户快速切换两种可用状态：打开和关闭。这也就是iOS应用上的“复选框”，只不过以开关的形式表现。开关控件可以自定义打开和关闭状态的颜色，但开关切换按钮的样式和尺寸不能设置修改。</p>
+				<h4>键盘（Keyboards）</h4>
+				<p>对于特殊文本的输入提供了多种键盘类型。可以创建你完全自定义的键盘，而默认键盘不能自定义风格或尺寸。</p>
+				<h2 id="design-resources">深入阅读和资源</h2>
+				<p>本文章只是提供一些让你入门 iOS 7 的基本信息。一旦深入，你可能会对更多的细节感兴趣。以下这些文章和资源会帮到你：</p>
+				<div class="half">
+					<h4>通用</h4>
+					<ul class="resource-list">
+						<li>
+							<a href="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/mobilehig/">iOS人机交互指南（iOS Human Interface Guideline）</a> <span>by Apple</span>
+						</li>
+						<li>
+							<a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/UIKitUICatalog/#//apple_ref/doc/uid/TP40012857-UIView-SW1">UIKit UI 目录（UIKit User Interface Catalog）</a> <span>by Apple</span>
+						</li>
+						<li>
+							<a href="http://bjango.com/articles/appdesignworkflow/">我的App设计流程（My app design workflow）</a> <span>by Marc Edwards</span>
+						</li>
+						<li>
+							<a href="http://www.shareasale.com/r.cfm?B=459102&amp;U=1025532&amp;M=43811&amp;urllink=">学习移动App设计（Learn Mobile App Design）</a> <span>on Treehouse</span>
+						</li>
+					</ul>
+					<h4>动效&amp;原型</h4>
+					<ul class="resource-list">
+						<li>
+							<a href="http://framerjs.com/">Framer.js</a>
+							<span>$79.99, trial available</span>
+						</li>
+						<li>
+							<a href="https://marvelapp.com/">Marvel</a>
+							<span>Free Prototyping for Everyone</span>
+						</li>
+						<li>
+							<a href="http://www.pixate.com/">Pixate</a>
+							<span>Prototype iOS animations</span>
+						</li>
+						<li>
+							<a href="http://facebook.github.io/origami/">Origami</a>
+							<span>Quartz composer framework by Facebook</span>
+						</li>
+						<li>
+							<a href="http://blog.mengto.com/prototype-xcode-storyboard/">如何基于故事板使用XcondeHow创建原型（How To Prototype In Xcode Using Storyboard）</a> <span>by Meng To</span>
+						</li>
+					</ul>
+					<h4>教程</h4>
+					<ul class="resource-list">
+						<li>
+							<a href="https://designthencode.com/scratch/">Building iOS Apps From Scratch</a>
+							<span>by Mike Rundle</span>
+						</li>
+						<li>
+							<a href="https://www.cocoacontrols.com/">Cocoa Controls</a>
+							<span>Open Source, Commercial</span>
+						</li>
+					</ul>
+				</div>
+				<div class="half last">
+					<h4>栏按钮图标（Bar Button Icons）</h4>
+					<ul class="resource-list">
+						<li>
+							<a href="https://creativemarket.com/UIFest/47111-RetinaIcons-up-to-3000-iOS8-Icons?u=ivomynttinen">3000 Retina Icons for iOS</a>
+							<span>on Creative Market - $99</span>
+						</li>
+						<li>
+							<a href="https://creativemarket.com/Iconsmind/83095-2080-iOS-8-iOS-7-Android-Icons?u=ivomynttinen">2080 iOS 8 Icons</a>
+							<span>on Creative Market - $69</span>
+						</li>
+						<li>
+							<a href="https://creativemarket.com/webalys/20851-1640-ios7-icons-Streamline-Icons?u=ivomynttinen">1640 iOS Icons - Streamline</a>
+							<span>on Creative Market - $69</span>
+						</li>
+						<li>
+							<a href="https://creativemarket.com/creativestall/88593-500-Line-Vector-Icons?u=ivomynttinen">500 Line Vector Icons</a>
+							<span>on Creative Market - $11</span>
+						</li>
+					</ul>
+					<h4>App 图标</h4>
+					<ul class="resource-list">
+						<li>
+							<a href="http://appicontemplate.com/">App Icon Template</a>
+							<span class="ps">Photoshop</span>
+						</li>
+						<li>
+							<a href="http://ios.robs.im/">iOS App Icon Template</a>
+							<span class="sketch">Sketch</span>
+						</li>
+					</ul>
+					<h4>UI Kits</h4>
+					<ul class="resource-list">
+						<li>
+							<a href="http://www.teehanlax.com/tools/iphone-sketch-app/">iPhone GUI for Sketch (iOS 7)</a>
+							<span class="sketch">Sketch</span>
+						</li>
+						<li>
+							<a href="http://www.teehanlax.com/tools/ios7-iphone/">iOS 7 GUI PSD (iPhone)</a>
+							<span class="ps">Photoshop</span>
+						</li>
+						<li>
+							<a href="http://www.teehanlax.com/tools/ipad-sketch-app/">iPad GUI for Sketch (iOS 7)</a>
+							<span class="sketch">Sketch</span>
+						</li>
+						<li>
+							<a href="http://www.teehanlax.com/tools/ipad/">iPad GUI PSD</a>
+							<span class="ps">Photoshop</span>
+						</li>
+						<li>
+							<a href="https://github.com/rafaelconde/ios8-ui-kit">iOS 8 UI Kit + for Sketch</a>
+							<span class="sketch">Sketch</span>
+						</li>
+						<li>
+							<a href="http://www.rojcyk.com/blueprint/">Blueprint</a>
+							<span class="sketch">Sketch</span>
+						</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+				
+				<div class="book">
+					<h3>I’m writing a book about designing for iOS.</h3>
+					<p>You will learn how to plan, design and prototype great apps. Subscribe to get notified when it is ready, get free chapters and 50% off deal.</p>
+					<form id="mc-form" novalidate="true">
+						<label for="mc-email">Enter your email address:</label>
+						<div class="input-group">
+							<input id="mc-email" type="email" placeholder="Enter your email address" name="EMAIL">
+							<button type="submit">Submit</button>
+						</div>
+					</form>
+				</div>
+				
+			</article>
+			
+			
+			<nav class="bs-docs-sidebar" data-spy="affix" data-offset-top="670" data-offset-bottom="500">
+				<div>
+				<h6>文档目录</h6>
+				<ul id="sidebar" class="nav nav-stacked fixed">
+					<li class="active">
+						<a href="http://iosdesign.ivomynttinen.com/#resolutions-displays">分辨率和显示</a>
+						<ul class="nav nav-stacked">
+							<li class="active"><a href="http://iosdesign.ivomynttinen.com/#points-pixels">点（pt）和像素（px）</a></li>
+							<li class=""><a href="http://iosdesign.ivomynttinen.com/#downsampling">iPhone 6Plus 降采样</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="http://iosdesign.ivomynttinen.com/#app-icons">App 图标</a>
+						<ul class="nav nav-stacked">
+							<li><a href="http://iosdesign.ivomynttinen.com/#app-icon-applied-effects">自带效果</a></li>
+							<li><a href="http://iosdesign.ivomynttinen.com/#app-icon-grid">栅格系统</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="http://iosdesign.ivomynttinen.com/#typography">字体</a>
+						<ul class="nav nav-stacked">
+							<li><a href="http://iosdesign.ivomynttinen.com/#custom-fonts">自定义字体</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="http://iosdesign.ivomynttinen.com/#color-palette">配色</a>
+					</li>
+					<li>
+						<a href="http://iosdesign.ivomynttinen.com/#iconography">图标运用</a>
+						<ul class="nav nav-stacked">
+							<li><a href="http://iosdesign.ivomynttinen.com/#bar-button-icons">栏按钮图标（Bar Button Icons）</a></li>
+							<li><a href="http://iosdesign.ivomynttinen.com/#activity-view-icons">活动视图图标</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="http://iosdesign.ivomynttinen.com/#commonly-used-design-elements">UI 元素</a>
+						<ul class="nav nav-stacked">
+							<li><a href="http://iosdesign.ivomynttinen.com/#status-bar">状态栏（Status Bar）</a></li>
+							<li><a href="http://iosdesign.ivomynttinen.com/#nav-bar">导航栏（Navigation Bar）</a></li>
+							<li><a href="http://iosdesign.ivomynttinen.com/#toolbar">工具栏（Toolbar）</a></li>
+							<li><a href="http://iosdesign.ivomynttinen.com/#search-bar">搜索栏（Search Bar）</a></li>
+							<li><a href="http://iosdesign.ivomynttinen.com/#tab-bar">标签栏（Tab Bar）</a></li>
+							<li><a href="http://iosdesign.ivomynttinen.com/#table-view">表格视图（Table View）</a></li>
+							<li><a href="http://iosdesign.ivomynttinen.com/#temporary-views">临时视图（Temporary Views）</a></li>
+							<li><a href="http://iosdesign.ivomynttinen.com/#controls">控件（Controls）</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="http://iosdesign.ivomynttinen.com/#design-resources">设计资源</a>
+					</li>
+				</ul>
+				</div>
+			</nav>
+			
+		</div>
+		
+		
+				<footer class="footer" id="footer-particles">
+			<div class="wrap">
+				<nav class="sitemap">
+					<ul>
+						<li><a href="http://ivomynttinen.com/" title="View profile" class="underliner">Profile<span></span></a></li>
+						<li><a href="http://ivomynttinen.com/work/" title="View the portfolio" class="underliner">Work<span></span></a></li>
+						<li><a href="http://ivomynttinen.com/blog/" title="Read the blog" class="underliner">Blog<span></span></a></li>
+						<li><a href="http://ivomynttinen.com/contact/" title="Write me a letter" class="underliner">Contact<span></span></a></li>
+						<li><a href="http://ivomynttinen.com/legal/" title="Sue my ass" class="underliner">Legal<span></span></a></li>
+					</ul>
+				</nav>
+				<span class="social">You should follow me on <a href="https://twitter.com/ivomynttinen" title="Follow me on Twitter">Twitter</a>, <a href="http://dribbble.com/ivomynttinen" title="View my work on Dribbble">Dribbble</a> or <a href="http://www.facebook.com/ivomynttinendesign" title="Follow me on Facebook">Facebook</a>.</span>
+				<span class="copyright">Copyright 2014 Ivo Mynttinen</span>
+			</div>
+		<canvas width="1903" height="218" style="width: 100%; height: 100%;"></canvas></footer>
+
+		<script src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="http://ivomynttinen.com/theme/js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
+		
+		<script src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/main.min.js"></script>
+		<script src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/fusion.min.js"></script>
+		<script src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/docs.min.js"></script>
+	
+
+<script type="text/javascript" async="true" src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/load.js"></script></body><iframe id="tmp_downloadhelper_iframe" style="display: none;"></iframe></html>
