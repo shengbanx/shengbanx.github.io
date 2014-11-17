@@ -178,12 +178,12 @@
 					</table>
 				</div>
 				<h3 id="points-pixels">点（pt）和像素（px）的区别</h3>
-				<p>像素（pixels，px）是我们可以在数码显示上控制最小的计算单位。在同一个屏幕尺寸，更高的PPI（每英寸的像素数目），就能显示更多的像素，同时渲染的内容也会更清晰。</p>
-				<p>点（points，pt）是一个与分辨率无关的计算单位。根据屏幕的像素密度，一个点可以包含多个像素（例如，在标准Retina显示屏上1 pt里有2 x 2个像素）。</p>
+				<p>像素（pixels）是数码显示上最小的计算单位。在同一个屏幕尺寸，更高的PPI（每英寸的像素数目），就能显示更多的像素，同时渲染的内容也会更清晰。</p>
+				<p>点（points）是一个与分辨率无关的计算单位。根据屏幕的像素密度，一个点可以包含多个像素（例如，在标准Retina显示屏上1 pt里有2 x 2个像素）。</p>
 				<p>当你为多种显示设备设计时，你应该以“点”为单位作参考，但设计还是以像素为单位设计的。这意味着仍然需要以3种不同的分辨率导出你的素材，不管你以哪种分辨率设计你的应用。</p>
 				<div class="tip">
 					<h4>注意</h4>
-					<p>只要没有另外指定（如一个数值加上“px”），此指南提到具体尺寸均以点（pt）为单位。如果你需要转换成相应的像素值，很简单，Retina屏相应乘2或Retina HD屏则乘3。</p>
+					<p>如没有另外指定（如一个数值加上“px”），此指南提到具体尺寸均以点（pt）为单位。如果你需要转换成相应的像素值，很简单，Retina屏相应乘2或Retina HD屏则乘3。</p>
 				</div>
 				<div class="table-holder">
 					<table class="iosgd-data">
@@ -265,7 +265,7 @@
 								<th>设备</th>
 								<th>App Icon</th>
 								<th>AppStore Icon</th>
-								<th>快速索引</th>
+								<th>Spotlight搜索</th>
 								<th>设置</th>
 							</tr>
 						</thead>
@@ -333,23 +333,23 @@
 				<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-color-theme.jpg" alt="iOS 8 default colors">
 				<p>自从iOS7，苹果开始在系统界面和预装应用上使用明亮的配色。而你可以使用以上默认的iOS配色，也可以使用自己的颜色（如果想脱颖而出的话最好这样做）。</p>
 				<h2 id="iconography">图标运用</h2>
-				<p>iOS应用里，作为动作执行的视觉表现，图标永远是最好的方式，其常用于搭配文本或者完全取代文本（常见的有“新建”、“删除”等）。通常，我们会将图标处理成导航栏、工具栏或标签栏的一部分。</p>
+				<p>iOS应用里，作为动作执行的视觉表现，图标永远是最好的方式，其常用于搭配文本或者完全取代文本（常见的有“新建”、“删除”等）。通常，在导航栏、工具栏或标签栏上，我们会对图标作相应的处理。</p>
 				<h3 id="bar-button-icons">栏按钮图标（Bar Button Icons）</h3>
-				<p>Bar上的图标应该总有两种不同的状态：以1或1.5pt线宽的轮廓线描绘的默认状态，以实体填充的活动状态。</p>
+				<p>Bar上的图标应有两种不同的状态：以1或1.5pt线宽的轮廓线描绘的默认状态，以实体填充的活动状态。</p>
 				<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-bar-icons.jpg" alt="iOS button bar outline and solid icons">
-				<p>绝对不要在按钮图标上添加任何如投影或阴影这样的效果，因为这在旧iOS版本（iOS7 Redesign之前）上显得十分多余。按钮图标应该在半透明背景上以纯色绘制——图标的形状将用于遮罩，而图标颜色将会以编程方式赋予。</p>
+				<p>不要在按钮图标上添加任何如投影或阴影这样的效果，因为这在旧iOS版本（iOS7 Redesign之前）上显得十分多余。此外，按钮图标应该在半透明背景上以纯色绘制——图标的形状将用于遮罩，而图标颜色将会以编程方式赋予。</p>
 				<h3 id="activity-view-icons">活动视图图标</h3>
-				<p>活动视图（如众所周知的分享弹出框Share Popover）上的图标通常以轮廓线风格设计，但iOS8开始，苹果又回归到了在纯白背景上使用实体填充图标了。</p>
+				<p>活动视图（如众所周知的分享弹出框 Share Popover）上的图标通常是线性图标，但iOS8开始，苹果又回归到了在纯白背景上使用实体填充图标了。</p>
 				<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-activity-icons.jpg" class="small-margin" alt="iOS activity sheet icons">
 				<h2 id="commonly-used-design-elements">常用设计元素</h2>
-				<p>iOS提供了大量的可以直接使用的视图和控件，帮助开发者快速创建界面。有些元素可以一定程度上地自定义，但有些可能就不行，而且也是不应该自定义的。当设计一个iOS应用时，你要了解这些工具库，学会什么时候合适就要使用他们。然而，有些时候，创建一个自定义控件也许更好，因为你需要一个更个性的外观，或者想要改变一个已存在控件的功能（危险领域）。总之一切皆可能，有时候打破规则更有意义，但一定要三思而后行。</p>
+				<p>iOS提供了大量的可以直接使用的视图和控件，帮助开发者快速创建界面。有些元素可以一定程度上地自定义，但有些可能就不行，而且也是不应该自定义的。当设计一个iOS应用时，你要了解这些工具库，学会什么时候合适就要使用他们。不过，有些时候，创建一个自定义控件也许更好，因为你需要一个更个性的外观，或者想要改变一个已存在控件的功能（危险领域）。总之一切皆可能，有时候打破规则更有意义，但一定要三思而后行。</p>
 				<h3 id="status-bar">状态栏（Status Bar）</h3>
 				<p>状态栏包含基本系统信息，例如当前事件、时间、电池状态及其他更多信息。视觉上状态栏是和导航栏相连的，都使用一样的背景填充。为配合App的风格和保证可读性，状态栏内容有两种不同的风格：暗色（黑）和亮色（白）。</p>
 				<div class="ui-holder">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-status-bar.jpg" alt="iOS Status Bar">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-status-bar-hover.png" class="spec">
 				</div>
-				<p>可以隐藏状态栏，但还是请三思。举个例子，当应用下载网络内容时，用户可能想知道，是否连上了一个WIFI网络；或者，当应用要请求蓝牙连接到第三方硬件时，是否打开了蓝牙。一个合理的隐藏状态栏的理由是，当你希望从一个单一元素里移除一切干扰时，比如当展示需要全屏的内容时，如图片幻灯。</p>
+				<p>可以隐藏状态栏，但还是那句，请三思。举个例子，当应用下载网络内容时，用户可能想知道，是否连上了一个WIFI网络；或者，当应用要请求蓝牙连接到第三方硬件时，是否打开了蓝牙。如果真的要隐藏，一个合理的隐藏状态栏的理由是，当你希望从一个单一元素里移除一切干扰时，比如当展示需要全屏的内容时，如图片幻灯。</p>
 				<h3 id="nav-bar">导航栏（Navigation Bar）</h3>
 				<p>导航栏包含了一些控件，用来在应用里不同的视图中导航，以及管理当前视图中的内容。导航栏总在屏幕的顶部，状态栏的正下方。默认的，导航栏背景会进行轻微半透明处理，以及对下面的内容进行毛玻璃办的模糊处理。背景可以填充纯色、渐变颜色，或者是自定义位图。</p>
 				<div class="ui-holder">
@@ -377,7 +377,7 @@
 				</div>
 				<p>工具栏通常用于超过3个主动作的特定视图。否则很难适应而且外观会看起来很混乱。</p>
 				<h3 id="search-bar">搜索栏（Search Bar）</h3>
-				<p>搜索栏有两种默认的风格：弹出（Prominent）和最小化（Minimal）。两种的功能都相同。</p>
+				<p>搜索栏默认有两种风格状态：凸显（Prominent）和最小化（Minimal）。两种的功能都相同。</p>
 				<ul>
 					<li>只要用户没有输入文本时，搜索框内将显示提示文本（Placeholder Text），并且，可以选择地设置一个书签图标，用来查看最近搜索以及保存的搜索。</li>
 					<li>一旦输入搜索项目，提示文本将消失，而一个清晰的清空按钮将出现在右端。</li>
@@ -395,12 +395,12 @@
 				<span class="caption">最小化状态的搜索栏。</span>
 				<p>为了查询搜索能更好地控制，可以为搜索栏接上一个范围栏（Scope Bar）。范围栏将使用和搜索栏相同的风格，其在明确定义了搜索结果类别的情况下会很有用。例如，一个音乐应用，搜索结果可以再次通过歌手、专辑或歌曲进行筛选。</p>
 				<h3 id="tab-bar">标签栏（Tab Bar）</h3>
-				<p>标签栏常用于快速切换应用上的独立视图，且一般也只能这样用。通常在屏幕底部。默认情况下使用和导航栏一样的轻微半透明，以及使用和系统一样的模糊处理底部内容。</p>
+				<p>标签栏常用于快速切换应用上的独立视图，且一般也只能这样用。通常在屏幕底部。默认情况下使用和导航栏一样的轻微半透明，以及使用和系统一样的模糊处理遮住的内容。</p>
 				<div class="ui-holder">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-tab-bar.jpg" alt="iOS Tab Bar">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-tab-bar-hover.png" class="spec">
 				</div>
-				<p>标签栏仅可以拥有固定的最大标签数。一旦数目超过最大数目，则最后一个选项卡将会以“更多标签”代替，其余标签以列表形式隐藏于此，另外，一搬有选项可以对显示的选项卡重新进行排序。</p>
+				<p>标签栏仅可以拥有固定的最大标签数。一旦数目超过最大数目，则最后一个选项卡将会以“更多标签”代替，其余标签以列表形式隐藏于此，另外，一般会有选项可以对显示的选项卡重新进行排序。</p>
 				<p>iPhone上最大选项卡数目是5个，而ipad上则可以显示多达7个而无需“更多”标签。</p>
 				<p>通知用户在一个新视图上有新消息，通常会在标签栏按钮上显示一个数字徽标。如果一个视图暂时隐藏，相关的选项卡按钮不会完全隐藏，而是会慢慢淡化以传达一个不可用的状态。 </p>
 				<h3 id="table-view">表格视图（Table View）</h3>
@@ -418,24 +418,24 @@
 				</div>
 				<p>分组表格视图以分组的方式组织你的"表行"。每个分组可以有一个头（最好用于描述组的内容）以及一个尾（显示帮助信息等）。分组表格至少要由一个分组组成，而且每个分组至少要有一行。</p>
 				<p>对于这两种表格视图类型，都拥有一些风格，能以一定的方式呈现数据，让用户可以简单地检索、浏览甚至修改它。</p>
-				<h4>默认表格</h4>
+				<h4>默认</h4>
 				<div class="ui-holder">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-table-default.jpg" alt="iOS default table view">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-table-default-hover.png" class="spec">
 				</div>
 				<p>默认的表格行风格是一个图标加一个标题，而图标在左端。</p>
-				<h4>带副标题表格</h4>
+				<h4>带副标题</h4>
 				<div class="ui-holder">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-table-subtitle.jpg" alt="iOS subtitle table view">
 				</div>
 				<p>带副标题的表格风格在标题下面允许有一个简短的副标题文本。常用于进一步解释或简短描述。</p>
-				<h4>带数值表格</h4>
+				<h4>带数值</h4>
 				<div class="ui-holder">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-table-value.jpg" alt="iOS subtitle table view">
 				</div>
 				<p>带数值表格风格可以带一个与行标题相关的特别值。和默认风格类似，每行也可以有一个图标和标题，都是左对齐。紧随其后的是右对齐的数值文本，通常颜色会比标题文本的颜色浅些。</p>
 				<h3 id="temporary-views">模态、浮动框、警告提示</h3>
-				<p>iOS提供多种临时视图，可以一定程度上显示、编辑和修改数据，以适应给定的情境。而每个临时视图都是具有特别的用途的，而且每个外观都不一样。所有临时视图都有一个共同点：当显示时，会在当前视图的最顶层（即在其他所有的上面），而且下面的内容会蒙上一层半透明黑色背景。</p>
+				<p>iOS提供多种临时视图，可以一定程度上显示、编辑和修改数据，以适应给定的情境。每个临时视图都是具有特别的用途的，而且每个外观都不一样。所有临时视图都有一个共同点：当显示时，会在当前视图的最顶层（即在其他所有的上面），而且下面的内容会蒙上一层半透明黑色背景。</p>
 				<h4>活动视图（Activity View）</h4>
 				<p>活动视图是用于执行特定任务的视图。这些任务可以是默认系统任务，如通过选项分享内容等，或者可以完全自定义这些动作。当设计自定义任务按钮图标时，你应该按照和栏按钮图标激活状态下同样的规范——实体填充，没有其余的效果，放在一个半透明背景上。</p>
 				<div class="ui-holder">
@@ -447,12 +447,12 @@
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-action-sheet.jpg" alt="iOS action sheet view">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-action-sheet-hover.png" class="spec">
 				</div>
-				<p>在竖屏时（以及在一些小屏幕横屏上也是），动作菜单总是以一列按钮滑动显示在屏幕底部。在这种情况下，一个动作菜单应该有一个取消按钮来关闭此视图，而不是只能执行前面的动作。</p>
-				<p>当有足够空间时（例如在iPad屏幕上），动作菜单视图则换成一个<a href="#popovers">浮动框（Popovers）</a>。这时并不要求要有一个关闭按钮，因为点击任意外面的空白地方j就可以关闭。</p>
+				<p>在竖屏时（以及在一些小屏幕横屏上也是），动作菜单总是以一列按钮滑动而出显示在屏幕底部。在这种情况下，一个动作菜单应该有一个取消按钮来关闭此视图，而不是只能执行前面的动作。</p>
+				<p>当有足够空间时（例如在iPad屏幕上），动作菜单视图则换成一个<a href="#popovers">浮动框（Popovers）</a>。这时并不要求要有一个关闭按钮，因为点击任意外面的空白地方就可以关闭了。</p>
 				
 				<h4>警告提醒（Alerts）</h4>
 				<p>警告提醒用于通知用户关键信息，以及可以强制用户做出一些动作选择。</p>
-				<p>警告视图总包含一个标题文本，可以少至一行（对于纯信息警告如“OK”），以及不限一个或两个按钮（请求式的决定，如“发送”和“取消”）。</p>
+				<p>警告视图总包含一个标题文本，可以不限于一行（对于纯信息警告如“OK”），以及不限一个或两个按钮（请求式的决定，如“发送”和“取消”）。</p>
 				<div class="ui-holder">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-alerts.jpg" alt="iOS Alerts">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-alerts-hover.png" class="spec">
@@ -463,35 +463,35 @@
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-edit-menu.jpg" alt="最小化状态的搜索栏">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-edit-menu-hover.png" class="spec">
 				</div>
-				<p>在一个元素被选定时(文本，图片及其他)，编辑菜单允许用户执行复制、粘贴、剪切等操作。虽然可以控制哪些选项是可以自定义的，但菜单的外观你是无法设置的，除非你构建一个自己的自定义编辑菜单。</p>
+				<p>在一个元素被选定时(文本，图片及其他)，编辑菜单允许用户执行复制、粘贴、剪切等操作。虽然菜单上的选项是可以自定义的，但菜单的外观你是无法设置的，除非你构建一个自己的自定义编辑菜单。</p>
 				<h4 id="popovers">浮动框（Popover）</h4>
-				<p>当一个特别动作要求用户在程序进行的同时输入多个信息时，浮动框（Popover）是绝佳选择。一个很好地例子就是，选择添加一个项目时，有好几项属性需要在项目被添加前设置好，这种情况喜爱可以在浮动框上完成。</p>
+				<p>当一个特别动作要求用户在程序进行的同时输入多个信息时，浮动框（Popover）是个绝佳选择。一个很好的例子就是，当选择添加一个项目时，有好几项属性需要在项目被添加前设置好，这时，这些设置可以在浮动框上完成。</p>
 				<p>在一般情况下，浮动框上方会有一个相关的控件（如一个按钮），当打开的时候浮动框的箭头指向控件。浮动框背景也是轻微减少不透明度的毛玻璃模糊效果，就像iOS7以来的其他大多数UI元素一样。</p>
 				<div class="ui-holder">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-popover.jpg" alt="iOS popover view">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-popover-hover.png" class="spec">
 				</div>
-				<p>浮动框是一个强大的临时视图，其可以包含多种元件，例如可以拥有自己的导航栏，表格视图，地图以及网页视图。当浮动框因为包含大量元素而拥有较大尺寸时，可以在浮动框内滚动，到达视图底部。</p>
+				<p>浮动框是一个强大的临时视图，其可以包含多种元件，例如可以拥有自己的导航栏，表格视图，地图以及网页视图。当浮动框因为包含大量元素而拥有较大尺寸时，可以在浮动框内滚动，从而到达视图底部。</p>
 				<h4>模态（Modals）</h4>
 				<p>对于要求用户执行多个指令或输入多个信息的任务来说，模态视图是一个十分有用的视图。模态出现在所有元素的顶层，而且，当打开时，其区块会与下面的其他交互元素产生相互作用。</p>
 				<p>输入模态常拥有：</p>
 				<ul>
 					<li>一个描述任务的标题；</li>
 					<li>一个不保存、不执行其他动作的关闭模态视图按钮；</li>
-					<li>一个保存或提交输入的信息的按钮；以及</li>
-					<li>各种对用户在模态视图上输入的信息起作用的元素。</li>
+					<li>一个保存或提交输入的信息的按钮；</li>
+					<li>以及各种对用户在模态视图上输入的信息起作用的元素。</li>
 				</ul>
 				<p>这是三种可用的模态视图风格：</p>
 				<ol>
 					<li>全屏（Full screen）：覆盖整个屏幕。</li>
-					<li>页表（Page sheet）：在竖屏时，模态视图只覆盖部分下面的内容，当前视图留下一部分可视区域，并覆盖一层半透明黑色背景。在横屏时，页表模态视图也是和全屏模态视图一样。</li>
+					<li>页表（Page sheet）：在竖屏时，模态视图只覆盖部分下面的内容，当前视图留下一部分可视区域，并覆盖一层半透明黑色背景。在横屏时，页表模态视图和全屏模态视图一样。</li>
 					<li>表单（Form sheet）：在竖屏时，模态视图在屏幕中间，周围区域可见但覆盖一层半透明黑色背景。当键盘显示时，模态视图的位置会自适应地改变。在横屏时，表单模态视图也是和全屏模态视图一样。</li>
 				</ol>
 				<h3 id="controls">控件（Controls）</h3>
-				<p>iOS为所有你能想到的基本输入类型提供了范围很广的控件。以上列表你会发现十分重要（因为经常会用到），另外完整的可用控件的列表，你得去<a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/UIKitUICatalog/UIControl.html#//apple_ref/doc/uid/TP40012857-UIControl-SW1" target="_blank">iOS开发者资料库</a>里查看。</p>
+				<p>iOS为所有你能想到的基本输入类型提供了范围很广的控件。这些控件你会发现十分重要（因为经常会用到），完整的可用控件的列表，你得去<a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/UIKitUICatalog/UIControl.html#//apple_ref/doc/uid/TP40012857-UIControl-SW1" target="_blank">iOS开发者资料库</a>里查看。</p>
 				<h4>按钮（Buttons）</h4>
-				<p>或许所有中最常用的控件就是这经典好用的按钮了。从iOS7开始，默认按钮设计就不再看起来像个按钮了，而更像是一个纯文本链接。不过按钮控件还是具有高度的自定义性，允许你自定义文本风格、投影以及颜色，甚至是一个按钮都是可以定制的，假如没有文本标签的话，全自定义背景都行。</p>
-				<p>记住，一个按钮可以有多个状态，每个状态需传达相关视觉语言：默认（Default），高亮（Highlighted），选定（Selected），不可用（Disabled.）。</p>
+				<p>或许所有中最常用的控件就是这经典好用的按钮了。从iOS7开始，默认按钮设计就不再看起来像个按钮了，而更像是一个纯文本链接。不过按钮控件还是具有高度的自定义性的，允许你自定义文本风格、投影以及颜色，甚至是一个按钮都是可以定制的。假如没有文本标签的话，全自定义背景都行。</p>
+				<p>记住，一个按钮有多个状态，每个状态需传达相关视觉语言：默认（Default），高亮（Highlighted），选定（Selected），不可用（Disabled.）。</p>
 				<h4>选择器（Pickers）</h4>
 				<p>选择器用于从可用值列表中选定一个值。其等于网站上常用的下拉选框（选择器也用于触摸模式下的Safari浏览器）。选择器的拓展版本是“数据拾取器”（Datepicker），可以让用户滚动一个日期时间列表来选择日、月份和时间。</p>
 				<div class="ui-holder">
@@ -508,7 +508,7 @@
 				<span class="caption">没有Icon和有Icon的分段控件</span>
 				<p>每个分段可以包含一个文本或一个图标，但不能同时有文本和图标。另外，也不推荐在一个分段控件里混用分段类型（文本和图标混合出现）。一个分段的宽度会基于分段的数量自动改变（即两个分段：各占总控件宽度50%，5个分段则各占20%）。</p>
 				<h4>滑块（Sliders）</h4>
-				<p>滑块控件可以让用户从一个允许范围里滑动选择一个特定的值。因为十分流畅也无需其余步骤就可以选择一个值，所以推荐滑块用于选择一个估计值，而不是一个需要精确的数值。例如，滑块控件可以很好地设置音量，因为用户可以从音量上听出区别，同时可以看到滑块上响和不响的区别，但如果是输入一个数值来设置分贝值就十分不现实了。</p>
+				<p>滑块控件可以让用户从一个允许范围内滑动滑块选择一个特定的值。因为滑动十分流畅也无需其余步骤就可以选择一个值，所以推荐滑块用于选择一个估计值，而不是一个需要精确的数值。比如，滑块控件可以很好地设置音量，因为用户可以从音量上听出区别，同时可以看到滑块上响和不响的区别，但如果是输入一个数值来设置分贝值就十分不现实了。</p>
 				<div class="ui-holder">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-slider.jpg" alt="iOS slider controls">
 					<img src="http://shengbanx.qiniudn.com/ios-design-guidelines/ios-guideline-assets/ios-slider-hover.png" class="spec">
@@ -525,7 +525,7 @@
 				<ul>
 					<li>你可以为每个步进按钮设置自定义的Icon；</li>
 					<li>在保留原生iOS外观的时，你可以自定义其边界的颜色，背景以及浅色（Tint Color）的Icon，其会自动设置到每个元素里。</li>
-					<li>如果需要进一步自定义，分段按钮以及分隔符完全可以使用自定义的背景图，</li>
+					<li>如果需要进一步自定义，分段按钮以及分隔符都完全可以使用自定义的背景图，</li>
 				</ul>
 				<h4>开关（Switch）</h4>
 				<div class="ui-holder">
@@ -534,7 +534,7 @@
 				</div>
 				<p>开关允许用户快速切换两种可用状态：打开和关闭。这也就是iOS应用上的“复选框”，只不过以开关的形式表现。开关控件可以自定义打开和关闭状态的颜色，但开关切换按钮的样式和尺寸不能设置修改。</p>
 				<h4>键盘（Keyboards）</h4>
-				<p>对于特殊文本的输入提供了多种键盘类型。可以创建你完全自定义的键盘，而默认键盘不能自定义风格或尺寸。</p>
+				<p>对于特殊文本的输入提供了多种键盘类型。可以创建自己的完全自定义键盘，但默认键盘不能自定义风格或尺寸。</p>
 				<h2 id="design-resources">深入阅读和资源</h2>
 				<p>本文章只是提供一些让你入门 iOS 7 的基本信息。一旦深入，你可能会对更多的细节感兴趣。以下这些文章和资源会帮到你：</p>
 				<div class="half">
